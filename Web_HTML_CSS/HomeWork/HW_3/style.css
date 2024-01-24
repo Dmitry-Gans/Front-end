@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.top {
+    padding-bottom: 96px;
+}
+
+.header {
+    padding-top: 40px
+}
+
+.top__content {
+    margin-top: 82px;
+}
+.title {
+    margin-top: 60px;
+}
+
+.text {
+    margin-top: 17px;
+}
+
+.ifo__buttons {
+    margin-top: 37px;
+}
+
+.top__logos {
+    margin-top: 200px;
+}
