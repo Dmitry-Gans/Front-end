@@ -1,31 +1,80 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(./fonts/Gilroy-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(./fonts/Gilroy-Medium.woff2);
+}
+
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: url(./fonts/Gilroy-Semibold.woff2);
+}
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .top {
-    padding-bottom: 96px;
+  padding-bottom: 96px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - 585px);
+  padding-right: calc(50% - 585px);
 }
 
 .header {
-    padding-top: 40px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 500px;
+  padding-top: 40px;
 }
 
+.header__links {
+    display: flex;
+    width: 533px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+  color: #000;
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.link1 {
+    color: #f25822;
+    font-family: "Gilroy-SemiBold";
+    font-size: 14px;
+    font-weight: 400;
+  }
+
 .top__content {
-    margin-top: 82px;
+  margin-top: 82px;
 }
 .title {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .text {
-    margin-top: 17px;
+  margin-top: 17px;
 }
 
 .ifo__buttons {
-    margin-top: 37px;
+  margin-top: 37px;
 }
 
 .top__logos {
-    margin-top: 200px;
+  margin-top: 200px;
 }
