@@ -39,18 +39,12 @@ body {
   margin-bottom: 197px;
 }
 
-.text {
-  width: 558px;
-  color: #B4B7BB;
-  font-size: 18px;
-  font-weight: 600;
-}
-
 .subtitle {
   color: var(--3-a-68-b-8, #3a68b8);
   font-size: 18px;
   font-style: normal;
   margin-bottom: 10px;
+  line-height: 160%;
 }
 
 .title {
@@ -58,6 +52,15 @@ body {
   font-size: 55px;
   font-weight: 800;
   margin-bottom: 40px;
+  line-height: 130%;
+}
+
+.text {
+  width: 558px;
+  color: #b4b7bb;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
 }
 
 .top__buttons {
@@ -90,6 +93,47 @@ body {
 }
 
 .top__logos {
-    display: flex;
-    gap: 71px;
+  display: flex;
+  gap: 71px;
+}
+
+.content {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 362px);
+  justify-content: center;
+  padding-top: 264px;
+  padding-bottom: 257px;
+}
+
+.block {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+  gap: 30px;
+  border-radius: 10px;
+  background: #132035;
+}
+
+.block4 {
+  padding-bottom: 144px;
+  grid-column: span 2;
+  grid-row: span 2;
+  gap: 60px;
+}
+
+.block__title {
+  color: #b8bcc2;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.block__text {
+  color: #b8bcc2;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
 }
