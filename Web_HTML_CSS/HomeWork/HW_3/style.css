@@ -40,10 +40,10 @@ a {
 }
 
 .header__links {
-    display: flex;
-    width: 533px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 533px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .link {
@@ -54,27 +54,72 @@ a {
 }
 
 .link1 {
-    color: #f25822;
-    font-family: "Gilroy-SemiBold";
-    font-size: 14px;
-    font-weight: 400;
-  }
+  color: #f25822;
+  font-family: "Gilroy-SemiBold";
+  font-size: 14px;
+  font-weight: 400;
+}
 
 .top__content {
-  margin-top: 82px;
+  display: flex;
+  gap: 40px;
+  padding-top: 82px;
+  padding-bottom: 162px;
 }
+
+.top__info {
+    width: 522px;
+}
+
 .title {
-  margin-top: 60px;
+  color: #000;
+  font-family: "Gilroy-Bold";
+  font-size: 60px;
+  font-weight: 400;
+  padding-bottom: 17px;
 }
 
 .text {
-  margin-top: 17px;
+  color: #888;
+  width: 466px;
+  font-family: "Gilroy-Medium";
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 37px;
 }
 
 .ifo__buttons {
-  margin-top: 37px;
+  display: flex;
+  gap: 72px;
+}
+
+.ifo__button1 {
+  color: #fff;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  font-weight: 400;
+  width: 140px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background: #f25822;
+  box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
+}
+
+.ifo__button2 {
+  color: #aaa;
+  background: none;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
 }
 
 .top__logos {
-  margin-top: 200px;
+  display: flex;
+  gap: 48px;
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
