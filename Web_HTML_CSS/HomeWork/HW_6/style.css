@@ -17,7 +17,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -33,13 +33,15 @@ button {
 }
 
 .header {
+  background-color: #222222;
+}
+
+.header__size {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  background-color: #222222;
+  padding: 18px 8px;
 }
 
 .header__left {
@@ -54,15 +56,13 @@ button {
   gap: 33px;
 }
 
-.top_content {
-  background-color: #f1e4e6;
-}
-
 .banner_size {
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
+  height: 764px;
   display: flex;
   gap: 63px;
+  background-color: #f1e4e6;
 }
 
 .img__banner {
@@ -179,8 +179,6 @@ button {
 .products-content__item {
   display: flex;
   flex-direction: column;
-  width: 360px;
-  height: 581px;
 }
 
 .products-content__info {
@@ -212,7 +210,7 @@ button {
 .all-products {
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 95px;
 }
 
 .all-products__button {
@@ -220,4 +218,71 @@ button {
   height: 48px;
   color: #f26376;
   border: 1px solid #ff6a6a;
+}
+
+@media (max-width: 1024px) {
+  .header__size {
+    padding: 18px 16px;
+  }
+
+  .center {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+
+  .banner_size {
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
+    gap: 39px;
+    height: 367px;
+  }
+
+  .img__banner {
+    width: 386px;
+    height: 368px;
+  }
+
+  .title__banner {
+    width: 311px;
+    height: 92px;
+    margin-top: 138px;
+    margin-bottom: 138px;
+  }
+
+  .title__banner h1 {
+    font-size: 44px;
+  }
+
+  .title__banner h2 {
+    font-size: 24px;
+  }
+
+  .categories_content {
+    gap: 20px;
+    padding-bottom: 58px;
+  }
+
+  .category {
+    min-width: 232px;
+    height: 168px;
+  }
+
+  .category4 {
+    height: 116px;
+  }
+
+  .info-products {
+    padding-bottom: 72px;
+  }
+
+  .products-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+
+  .all-products {
+    padding-bottom: 64px;
+  }
 }
