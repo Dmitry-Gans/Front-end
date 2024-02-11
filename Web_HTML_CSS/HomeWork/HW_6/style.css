@@ -65,12 +65,12 @@ button {
   background-color: #f1e4e6;
 }
 
-.img__banner {
+.banner__img {
   max-width: 800px;
   max-height: 764px;
 }
 
-.title__banner {
+.banner__title {
   display: flex;
   flex-wrap: wrap;
   max-width: 406px;
@@ -83,12 +83,12 @@ button {
   text-align: left;
 }
 
-.title__banner h1 {
+.banner__title h1 {
   font-weight: 900;
   font-size: 48px;
 }
 
-.title__banner h2 {
+.banner__title h2 {
   font-weight: 700;
   font-size: 32px;
 }
@@ -130,7 +130,7 @@ button {
   background-image: url(./img/categories4_acces.svg);
 }
 
-.category_shadow {
+.category__shadow {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,11 +139,11 @@ button {
   height: 100%;
 }
 
-.text_category {
+.category__text {
   color: #fff;
 }
 
-.title_category {
+.category__title {
   font-weight: 700;
   font-size: 24px;
   color: #f16d7f;
@@ -237,23 +237,23 @@ button {
     height: 367px;
   }
 
-  .img__banner {
+  .banner__img {
     width: 386px;
     height: 368px;
   }
 
-  .title__banner {
+  .banner__title {
     width: 311px;
     height: 92px;
     margin-top: 138px;
     margin-bottom: 138px;
   }
 
-  .title__banner h1 {
+  .banner__title h1 {
     font-size: 44px;
   }
 
-  .title__banner h2 {
+  .banner__title h2 {
     font-size: 24px;
   }
 
@@ -310,22 +310,22 @@ button {
     justify-content: center;
   }
 
-  .img__banner {
+  .banner__img {
     display: none;
   }
 
-  .title__banner {
+  .banner__title {
     width: 263px;
     height: 66px;
     margin: 0;
     padding: 0 0 0 15px;
   }
 
-  .title__banner h1 {
+  .banner__title h1 {
     font-size: 38px;
   }
 
-  .title__banner h2 {
+  .banner__title h2 {
     font-size: 20px;
   }
 
