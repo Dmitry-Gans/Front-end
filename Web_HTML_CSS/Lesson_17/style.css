@@ -1,0 +1,18 @@
+.text-color {
+    color: red;
+}
+
+.nav-background {
+    background-color: aquamarine;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    justify-content: center;
+}
+
+.product-box {
+    flex-wrap: wrap;
+    gap: 32px;
+}
