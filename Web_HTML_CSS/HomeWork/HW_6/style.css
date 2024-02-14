@@ -663,6 +663,7 @@ button {
 
   .nav {
     flex-direction: row-reverse;
+    padding-right: 0;
   }
 
   .nav__burger-menu {
@@ -671,6 +672,10 @@ button {
 
   .nav__link {
     visibility: hidden;
+  }
+
+  .nav__number {
+    display: none;
   }
 
   .banner_size {
