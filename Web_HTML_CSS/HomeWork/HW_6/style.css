@@ -454,6 +454,10 @@ button {
   margin-bottom: 32px;
 }
 
+.subscribe-content__form {
+  display: flex;
+}
+
 .subscribe-content__input {
   box-sizing: border-box;
   width: 256px;
