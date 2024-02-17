@@ -1,0 +1,7 @@
+@import 'var';
+@mixin displayFlex ($position){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $position;
+    align-items: center;
+}

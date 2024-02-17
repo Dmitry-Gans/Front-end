@@ -1,0 +1,43 @@
+@import 'var';
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: $gapNav;
+    &__link {
+        text-decoration: none;
+      }
+  }
+
+// Задание 3:
+
+.content {
+    @include displayFlex($position);
+    gap: $gapNav;
+
+    &__item {
+        @include displayFlex($position);
+        width: $sizeWidth / 4;
+        background-color: $color;
+        height: 200px;
+        border: $border;
+    }
+}
+
+// Задание 4
+
+%fontStyle {
+    font-family: sans-serif;
+    font-style: normal;
+    color: aquamarine;
+}
+
+.link {
+    @extend %fontStyle;
+}
