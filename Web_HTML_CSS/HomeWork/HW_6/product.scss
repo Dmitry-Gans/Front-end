@@ -1,0 +1,10 @@
+@import 'vars';
+@import 'mixins';
+@import 'header';
+@import 'products-content';
+@import 'subscribe-content';
+@import 'footer';
+
+.products-content__item4 {
+    grid-row: 1;
+}
