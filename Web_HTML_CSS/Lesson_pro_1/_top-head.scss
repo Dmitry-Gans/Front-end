@@ -1,0 +1,28 @@
+.top-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorSelectBackground;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__heading {
+        font-style: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorSelectText;
+    }
+}
+
+.bread-crumbs {
+    &__link {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #636363;
+    }
+    &__link_color {
+        font-weight: 700;
+        color: $colorSelectText;
+    }
+}
