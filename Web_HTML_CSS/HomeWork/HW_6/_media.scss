@@ -1,28 +1,22 @@
 @import "vars";
 @import "mixins";
 
-@media (max-width: 1440px) {
-  .nav__burger-menu {
-    right: -158px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1024px) {
+  .header__size {
+    padding: 18px 16px;
+  }
+
   .center {
-    @include centerSize(368px);
+    @include centerSize(736px);
   }
 
   .header__size {
     padding: 18px 16px;
   }
 
-  .nav__burger-menu {
-    right: -32px;
-  }
-
   .banner {
     &__size {
-      @include centerSize(384px);
+      @include centerSize(768px);
       gap: 39px;
       height: 367px;
     }
@@ -119,19 +113,24 @@
   }
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) and (min-width: 375px) {
   .center {
-    @include centerSize(171px);
+    @include centerSize(344px);
+  }
+
+  .header__size {
+    padding: 18px 0;
   }
 
   .nav {
     flex-direction: row-reverse;
     padding-right: 0;
+
     &__burger-menu {
-      right: -23px;
+      top: 54px;
     }
     &__link {
-      visibility: hidden;
+      display: none;
     }
     &__number {
       display: none;
@@ -139,8 +138,7 @@
   }
   .banner {
     &__size {
-      padding-left: calc(50% - 188px);
-      padding-right: calc(50% - 188px);
+      @include centerSize(375px);
       height: 363px;
       flex-wrap: wrap;
       align-content: center;
@@ -190,8 +188,7 @@
   }
 
   .products-content {
-    padding-left: calc(50% - 180px);
-    padding-right: calc(50% - 180px);
+    @include centerSize(360px);
     grid-template-rows: repeat(6, auto);
     grid-auto-flow: column dense;
     gap: 16px;

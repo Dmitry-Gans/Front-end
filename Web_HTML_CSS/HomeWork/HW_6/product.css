@@ -15,6 +15,11 @@ body {
   text-align: center;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 img {
   width: 100%;
   display: block;
@@ -66,15 +71,26 @@ button {
   color: #fff;
   background-color: #f16d7f;
 }
-.nav__link-burger:hover ~ .nav__burger-menu {
-  display: block;
+.nav__input-burger {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+.nav__input-burger:checked ~ .nav__burger-menu {
+  right: 0;
+  visibility: visible;
+}
+.nav__input-burger:checked path {
+  fill: #F16D7F;
 }
 .nav__burger-menu {
-  display: none;
   top: 56px;
-  right: -237px;
   box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
   position: absolute;
+  top: 56px;
+  right: -470px;
+  transition: right 0.3s;
+  visibility: hidden;
 }
 
 .menu {
@@ -278,6 +294,7 @@ button {
   padding-bottom: 48px;
 }
 .products-content__item {
+  width: 360px;
   display: flex;
   flex-direction: column;
 }
@@ -499,25 +516,20 @@ button {
   gap: 7.3px;
 }
 
-@media (max-width: 1440px) {
-  .nav__burger-menu {
-    right: -158px;
-  }
-}
 @media (min-width: 768px) and (max-width: 1024px) {
+  .header__size {
+    padding: 18px 16px;
+  }
   .center {
-    padding-left: calc(50% - 184px);
-    padding-right: calc(50% - 184px);
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
   }
   .header__size {
     padding: 18px 16px;
   }
-  .nav__burger-menu {
-    right: -32px;
-  }
   .banner__size {
-    padding-left: calc(50% - 192px);
-    padding-right: calc(50% - 192px);
+    padding-left: calc(50% - 384px);
+    padding-right: calc(50% - 384px);
     gap: 39px;
     height: 367px;
   }
@@ -600,27 +612,30 @@ button {
     width: 251px;
   }
 }
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) and (min-width: 375px) {
   .center {
-    padding-left: calc(50% - 85.5px);
-    padding-right: calc(50% - 85.5px);
+    padding-left: calc(50% - 172px);
+    padding-right: calc(50% - 172px);
+  }
+  .header__size {
+    padding: 18px 0;
   }
   .nav {
     flex-direction: row-reverse;
     padding-right: 0;
   }
   .nav__burger-menu {
-    right: -23px;
+    top: 54px;
   }
   .nav__link {
-    visibility: hidden;
+    display: none;
   }
   .nav__number {
     display: none;
   }
   .banner__size {
-    padding-left: calc(50% - 188px);
-    padding-right: calc(50% - 188px);
+    padding-left: calc(50% - 187.5px);
+    padding-right: calc(50% - 187.5px);
     height: 363px;
     flex-wrap: wrap;
     align-content: center;

@@ -4,7 +4,7 @@
 .banner {
   background-color: $colorBackground;
   &__size {
-    @include centerSize(800px);
+    @include centerSize(1600px);
     height: 764px;
     display: flex;
     gap: 63px;
