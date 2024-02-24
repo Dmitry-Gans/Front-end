@@ -87,7 +87,6 @@ button {
   top: 56px;
   box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
   position: absolute;
-  top: 56px;
   right: -470px;
   transition: right 0.3s;
   visibility: hidden;
@@ -625,7 +624,7 @@ button {
     padding-right: 0;
   }
   .nav__burger-menu {
-    top: 54px;
+    top: 55px;
   }
   .nav__link {
     display: none;
