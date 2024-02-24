@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Задание 1:
+Создать элемент details и добавить в него произвольный контент
+Добавить элемент summary с произвольным текстом
+Удалить стандартный треугольник у элемента details.
+Добавить стили для элемента summary
+Заменить стандартный треугольник на стрелку вправо \2192
+При открытии блока details заменить на стрелку вниз (данный код нужно найти в интернете) -->
+
+    <details>
+      <summary class="summary">Открыть список</summary>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, et.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio
+        tempora nemo mollitia voluptatem ut deserunt consequatur, assumenda,
+        minima neque doloribus aspernatur. Earum, optio quis vel voluptas error
+        fugit asperiores.
+      </p>
+    </details>
+
+    <!-- Задание 2:
+Создать фильтр сортировки -->
+
+    <div class="sort-menu">
+      <details class="sort-menu__cell">
+        <summary class="sort-menu__summary">TRENDING NOW</summary>
+      </details>
+      <details class="sort-menu__cell">
+        <summary class="sort-menu__summary">SIZE</summary>
+        <div class="sort-menu__checkbox">
+          <label><input type="checkbox" />XS</label
+          ><label><input type="checkbox" />M</label
+          ><label><input type="checkbox" />L</label>
+        </div>
+      </details>
+      <details class="sort-menu__cell">
+        <summary class="sort-menu__summary">PRICE</summary>
+      </details>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amat consectetur adipisicing elit. Saepe repellat
+      modi necessitatibus odio est nobis consequatur maxime nam rem, velit
+      corporis quos suscipit perferendis quaerat officiis quam vero nisi illo!
+    </p>
+
+    <!-- Задание 3:
+На главной странице интернет магазина https://www.figma.com/file/SbfOi2i4S1pIs0G6uOLPCx/shop-(Copy)?node-id=24%3A0&t=yqDGV1NUHY97IcQQ-0 есть бургер меню
+Без использования элемента details необходимо реализовать клик на изображение бургера меню
+При клике должен появляться блок menu-burger, при повторном клике на данное изображение, данный блок должен пропадать
+Выпадающий блок должен плавно появляться из правой части сайта. -->
+
+    <div class="box">
+      <input type="checkbox" id="input" class="nav__link-burger" />
+      <label for="input"
+        ><svg
+          width="32"
+          height="23"
+          viewBox="0 0 32 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z"
+            fill="#E8E8E8"
+          />
+        </svg>
+      </label>
+      <article class="nav__burger-menu">
+            <div class="menu">
+              <h2 class="menu__title">MENU</h2>
+              <div class="menu__item">
+                <h3 class="menu__item-title">MAN</h3>
+                <a href="#" class="menu__link">Accessories</a>
+                <a href="#" class="menu__link">Bags</a>
+                <a href="#" class="menu__link">Denim</a>
+                <a href="#" class="menu__link">T-Shirts</a>
+              </div>
+              <div class="menu__item">
+                <h3 class="menu__item-title">WOMAN</h3>
+                <a href="#" class="menu__link">Accessories</a>
+                <a href="#" class="menu__link">Jackets & Coats</a>
+                <a href="#" class="menu__link">Polos</a>
+                <a href="#" class="menu__link">T-Shirts</a>
+                <a href="#" class="menu__link">Shirts</a>
+              </div>
+              <div class="menu__item">
+                <h3 class="menu__item-title">KIDS</h3>
+                <a href="#" class="menu__link">Accessories</a>
+                <a href="#" class="menu__link">Jackets & Coats</a>
+                <a href="#" class="menu__link">Polos</a>
+                <a href="#" class="menu__link">T-Shirts</a>
+                <a href="#" class="menu__link">Shirts</a>
+                <a href="#" class="menu__link">Bags</a>
+              </div>
+            </div>
+          </article>
+    </div>
+  </body>
+</html>

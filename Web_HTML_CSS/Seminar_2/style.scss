@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+// Задание 1:
+
+// summary {
+//   display: block; // Первый вариант избавится от стрелки
+// }
+
+// summary::-webkit-details-marker {
+//   display: none; // Второй вариант избавится от стрелки через кросбраузерные теги
+// }
+// Их можно объединить
+
+details[open] .summary::before {
+  content: "\2193";
+}
+
+summary {
+  display: block;
+}
+
+.summary {
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::before {
+    content: "\2192";
+    margin: 10px;
+  }
+}
+
+// Задание 2:
+
+.sort-menu {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 100px;
+
+  &__cell:hover {
+    color: red;
+  }
+
+  &__summary::after {
+    content: url(./img/Vector.svg);
+    padding-left: 5px;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+    position: absolute;
+  }
+}
+
+// Задание 3:
+
+body, html {
+  overflow-x: hidden;// Отключаем скрол по оси Х(влево-вправо)
+}
+
+input {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+
+.box {
+  min-height: 100vh;
+  position: relative;
+}
+
+.nav__burger-menu {
+  position: absolute;
+  right: -250px;
+  transition: right 0.3s;
+  visibility: hidden;
+}
+
+input:checked ~ .nav__burger-menu {
+  right: 0;
+  visibility: visible;
+}
+
