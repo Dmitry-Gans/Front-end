@@ -86,6 +86,10 @@
     fill: $colorText;
   }
 
+  &__summary::-webkit-details-marker {
+    display: none;
+  }
+
   &__summary {
     display: flex;
     align-items: center;

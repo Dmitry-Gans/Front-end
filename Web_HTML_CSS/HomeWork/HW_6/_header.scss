@@ -82,7 +82,7 @@ button {
     visibility: visible;
   }
 
-  &__input-burger:checked path {
+  &__input-burger:checked &__label svg {
     fill: $colorText;
   }
 

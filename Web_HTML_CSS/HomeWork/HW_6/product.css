@@ -80,7 +80,7 @@ button {
   right: 0;
   visibility: visible;
 }
-.nav__input-burger:checked path {
+.nav__input-burger:checked .nav__label svg {
   fill: #F16D7F;
 }
 .nav__burger-menu {
@@ -258,6 +258,9 @@ button {
 }
 .product-description__details[open] .product-description__summary path {
   fill: #F16D7F;
+}
+.product-description__summary::-webkit-details-marker {
+  display: none;
 }
 .product-description__summary {
   display: flex;
