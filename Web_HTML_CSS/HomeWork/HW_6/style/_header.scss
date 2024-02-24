@@ -82,8 +82,10 @@ button {
     visibility: visible;
   }
 
-  &__input-burger:checked &__label svg {
-    fill: $colorText;
+  &__input-burger:checked ~ &__label{
+    svg {
+      fill: $colorText;
+    }
   }
 
   &__burger-menu {
