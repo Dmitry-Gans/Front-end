@@ -2,7 +2,7 @@
 @import "mixins";
 
 .subscribe-content {
-    @include centerSize(800px);
+    @include centerSize(1600px);
     &__background {
         background-image: url(./img/subscribe_background.svg);
         display: flex;

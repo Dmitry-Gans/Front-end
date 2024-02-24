@@ -1,0 +1,32 @@
+.breadcrumb {
+  background-color: $colorBackground;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-weight: 400;
+    font-size: 24px;
+    color: $colorText;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 14px;
+    color: $colorText2;
+  }
+
+  &__link-color {
+    font-weight: 700;
+    color: $colorText;
+  }
+}

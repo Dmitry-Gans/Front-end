@@ -1,0 +1,29 @@
+.product-details {
+  @include centerSize(1600px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-bottom: 42px;
+  background-color: #f7f7f7;
+  border-top: 2px solid #eaeaea;
+  border-bottom: 2px solid #eaeaea;
+
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    background-color: rgba(42, 42, 42, 0.15);
+  }
+
+  &__slider:hover path {
+    fill: $colorText;
+  }
+
+  &__img {
+    width: 597px;
+    height: 724px;
+  }
+}

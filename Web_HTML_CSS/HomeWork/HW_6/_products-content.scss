@@ -1,23 +1,6 @@
 @import "vars";
 @import "mixins";
 
-.info-products {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-bottom: 48px;
-  &__title {
-    font-weight: 400;
-    font-size: 30px;
-    color: #222;
-  }
-  &__text {
-    font-weight: 400;
-    font-size: 14px;
-    color: #9f9f9f;
-  }
-}
-
 .products-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -2,7 +2,7 @@
 @import "vars";
 
 .banner {
-  background-color: #f1e4e6;
+  background-color: $colorBackground;
   &__size {
     @include centerSize(800px);
     height: 764px;

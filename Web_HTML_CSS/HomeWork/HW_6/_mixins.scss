@@ -1,6 +1,6 @@
-@import 'vars';
+@import "vars";
 
-@mixin centerSize($sizeWidth){
-    padding-left: calc(50% - $sizeWidth);
-    padding-right: calc(50% - $sizeWidth);
+@mixin centerSize($sizeWidth) {
+  padding-left: calc(50% - $sizeWidth / 2);
+  padding-right: calc(50% - $sizeWidth / 2);
 }

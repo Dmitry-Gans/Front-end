@@ -2,7 +2,7 @@
 @import "mixins";
 
 .privileges-content {
-  @include centerSize(800px);
+  @include centerSize(1600px);
   &__background {
     display: flex;
     justify-content: center;
