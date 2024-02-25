@@ -231,6 +231,9 @@ summary::-webkit-details-marker {
   font-size: 14px;
   color: #6f6e6e;
 }
+.filter__link:hover {
+  color: #F16D7F;
+}
 .filter__sorting {
   display: flex;
   flex-direction: row;
@@ -279,6 +282,9 @@ summary::-webkit-details-marker {
   font-weight: 400;
   font-size: 14px;
   color: #6f6e6e;
+}
+.filter__checkbox:hover {
+  color: #F16D7F;
 }
 
 .products-content {
