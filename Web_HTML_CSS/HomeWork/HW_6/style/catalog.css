@@ -274,6 +274,8 @@ summary::-webkit-details-marker {
   width: 160px;
 }
 .filter__checkbox {
+  display: flex;
+  gap: 9px;
   font-weight: 400;
   font-size: 14px;
   color: #6f6e6e;
