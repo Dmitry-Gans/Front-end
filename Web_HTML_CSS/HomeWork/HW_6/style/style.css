@@ -31,6 +31,10 @@ button {
   border: none;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -202,21 +206,21 @@ button {
 }
 
 .category1 {
-  background-image: url(./img/categories1_girl.svg);
+  background-image: url(../img/categories1_girl.svg);
 }
 
 .category2 {
-  background-image: url(./img/categories2_men.svg);
+  background-image: url(../img/categories2_men.svg);
 }
 
 .category3 {
-  background-image: url(./img/categories3_kid.svg);
+  background-image: url(../img/categories3_kid.svg);
 }
 
 .category4 {
   height: 180px;
   grid-column: span 3;
-  background-image: url(./img/categories4_acces.svg);
+  background-image: url(../img/categories4_acces.svg);
 }
 .category4:hover {
   scale: 1.03;
@@ -323,6 +327,9 @@ button {
   padding-bottom: 95px;
 }
 .all-products__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 212px;
   height: 48px;
   color: #f26376;
@@ -378,7 +385,7 @@ button {
   padding-right: calc(50% - 800px);
 }
 .subscribe-content__background {
-  background-image: url(./img/subscribe_background.svg);
+  background-image: url(../img/subscribe_background.svg);
   display: flex;
   background-position: center;
   background-size: cover;
@@ -567,7 +574,7 @@ button {
     padding-bottom: 64px;
   }
   .subscribe-content__background {
-    background-image: url(./img/subscribe_background2.svg);
+    background-image: url(../img/subscribe_background2.svg);
   }
   .subscribe-content__info {
     flex-wrap: wrap;
@@ -680,7 +687,7 @@ button {
     gap: 46px;
   }
   .subscribe-content__background {
-    background-image: url(./img/subscribe_background3.svg);
+    background-image: url(../img/subscribe_background3.svg);
   }
   .subscribe-content__info {
     gap: 59px;

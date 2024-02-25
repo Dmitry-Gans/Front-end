@@ -30,6 +30,10 @@ button {
   border: none;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .center {
   @include centerSize($sizeWidth);
 }

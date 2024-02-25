@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap");
+
+@import 'vars';
+@import 'mixins';
+@import "header";
+@import "breadcrumb";
+@import 'filter';
+@import "products-content";
+
+.products-content {
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+}
+
+@import "subscribe-content";
+@import "footer";
