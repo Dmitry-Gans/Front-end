@@ -2,15 +2,18 @@
 
 @import 'vars';
 @import 'mixins';
-@import "header";
-@import "breadcrumb";
+@import 'header';
+@import 'breadcrumb';
 @import 'filter';
-@import "products-content";
+@import 'products-content';
 
 .products-content {
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(3, 1fr);
 }
 
-@import "subscribe-content";
-@import "footer";
+@import 'pagination';
+@import 'privileges-content';
+@import 'subscribe-content';
+@import 'footer';
+@import 'media';

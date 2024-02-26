@@ -1,6 +1,3 @@
-@import "vars";
-@import "mixins";
-
 .privileges-content {
   @include centerSize(1600px);
   &__background {
