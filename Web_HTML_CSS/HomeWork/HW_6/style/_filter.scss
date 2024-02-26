@@ -7,8 +7,9 @@
   &__details {
     width: 360px;
     box-sizing: border-box;
-    z-index: 2;
     &[open] {
+      position: relative;
+      z-index: 2;
       background: #ffffff;
       box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
     }

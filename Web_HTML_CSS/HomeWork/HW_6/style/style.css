@@ -25,6 +25,10 @@ img {
   display: block;
 }
 
+a, summary, label, input {
+  cursor: pointer;
+}
+
 button {
   cursor: pointer;
   background: none;
@@ -83,6 +87,7 @@ summary::-webkit-details-marker {
 .nav__input-burger:checked ~ .nav__burger-menu {
   right: 0;
   visibility: visible;
+  z-index: 2;
 }
 .nav__input-burger:checked ~ .nav__label svg {
   fill: #F16D7F;
@@ -128,6 +133,9 @@ summary::-webkit-details-marker {
   font-size: 14px;
   color: #6f6e6e;
   padding-left: 21px;
+}
+.menu__link:hover {
+  color: #F16D7F;
 }
 
 .banner {
