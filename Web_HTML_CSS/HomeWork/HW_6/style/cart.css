@@ -177,11 +177,13 @@ summary::-webkit-details-marker {
 .cart-content {
   padding-top: 96px;
   padding-bottom: 128px;
-}
-.cart-content__top-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.cart-content__top-box {
+  display: flex;
+  flex-direction: column;
 }
 .cart-content__selected {
   display: flex;

@@ -1,11 +1,13 @@
 .cart-content {
   padding-top: 96px;
   padding-bottom: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   &__top-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   }
 
   &__selected {
