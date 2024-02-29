@@ -234,8 +234,12 @@ summary::-webkit-details-marker {
 .cart-content__text:first-child .text-color {
   color: #F16D7F;
 }
+.cart-content__button {
+  transition: all 0.3s;
+}
 .cart-content__button:hover path {
   fill: #F16D7F;
+  transition: all 0.3s;
 }
 .cart-content__quantity[type=number] {
   width: 44px;
@@ -294,6 +298,7 @@ summary::-webkit-details-marker {
   font-size: 11px;
   color: #4a4a4a;
   border: 1px solid #a4a4a4;
+  transition: all 0.3s;
 }
 .address__button:hover {
   color: #fff;
@@ -341,6 +346,7 @@ summary::-webkit-details-marker {
   font-size: 16px;
   border: 1px solid #F16D7F;
   color: #F16D7F;
+  transition: all 0.3s;
 }
 .price__button:hover {
   background-color: #F16D7F;
@@ -359,6 +365,7 @@ summary::-webkit-details-marker {
   font-weight: 300;
   font-size: 14px;
   border: 1px solid #a4a4a4;
+  transition: all 0.3s;
 }
 .cart-content__bottom-button2 {
   width: 225px;

@@ -69,8 +69,13 @@
     }
   }
 
-  &__button:hover path {
-    fill: $colorText;
+  &__button {
+    transition: all 0.3s;
+
+    &:hover path {
+      fill: $colorText;
+      transition: all 0.3s;
+    }
   }
 
   &__quantity[type="number"] {
@@ -137,6 +142,7 @@
     font-size: 11px;
     color: #4a4a4a;
     border: 1px solid #a4a4a4;
+    transition: all 0.3s;
 
     &:hover {
       color: #fff;
@@ -189,6 +195,7 @@
     font-size: 16px;
     border: 1px solid $colorText;
     color: $colorText;
+    transition: all 0.3s;
 
     &:hover {
       background-color: $colorText;
@@ -209,6 +216,7 @@
   font-weight: 300;
   font-size: 14px;
   border: 1px solid #a4a4a4;
+  transition: all 0.3s;
 
   &2 {
     width: 225px;
