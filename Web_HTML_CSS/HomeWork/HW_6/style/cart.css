@@ -256,11 +256,6 @@ summary::-webkit-details-marker {
 .cart-content__quantity::-webkit-outer-spin-button, .cart-content__quantity::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.cart-content__address-and-price {
-  display: flex;
-  flex-direction: column;
-  gap: 57px;
-}
 .cart-content__bottom-box {
   padding-top: 72px;
   display: flex;
@@ -281,6 +276,11 @@ summary::-webkit-details-marker {
   background-color: #F16D7F;
   color: #fff;
   border: #F16D7F;
+}
+.cart-content__address-and-price {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
 }
 
 .address {

@@ -96,12 +96,6 @@
     -webkit-appearance: none;
   }
 
-  &__address-and-price {
-    display: flex;
-    flex-direction: column;
-    gap: 57px;
-  }
-
   &__bottom-box {
     padding-top: 72px;
     display: flex;
@@ -125,6 +119,12 @@
       color: #fff;
       border: $colorText;
     }
+  }
+
+  &__address-and-price {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
   }
 }
 
