@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+} /*# sourceMappingURL=style.css.map */
+
+/* Задание 4 */
+
+/* .navigation {
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      &:hover {
+        .sub-menu {
+          display: block;
+        }
+      }
+      .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: aqua;
+        padding: 10px;
+      }
+    }
+  }
+} */
+
+/* Задание 5 */
+
+/* .title {
+  color: red;
+  font-size: 48px;
+}
+
+@scope (.subtitle){
+  .title {
+    color: green;
+  }
+} */
+
+/* Задача 6 */
+
+@media (width <= 768px) {
+  .title {
+    color: aquamarine;
+  }
+}
+
+@media (width >= 1024px) {
+  .title {
+    color: red;
+  }
+}

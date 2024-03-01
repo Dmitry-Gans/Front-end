@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+//  Задание 1
+// .box-content {
+//   width: 200px;
+//   height: 30px;
+//   background-color: blueviolet;
+// }
+
+// .box-content:has(.text) { // has позволяет сделать выборку у родительского класса, через выбор дочернего элемента, при наличии .text у  .box-content применяем следующие свойства:
+//     background-color: aqua;
+// }
+
+// Задание 2
+
+// .title.title:nth-last-of-type(3n) {
+//     background-color: aqua;
+// }
+
+// Задание 3
+
+// .text {
+//     font-size: 16px;
+//     font-weight: 300;
+//     width: 300px;
+// }
+
+// .text::first-letter {
+//     initial-letter: 3 3;
+//     color: red;
+//     margin-right: 10px;
+// }
