@@ -1,5 +1,4 @@
 .subscribe-content {
-  @include centerSize(1600px);
   &__background {
     background-image: url(../img/subscribe_background.svg);
     display: flex;
@@ -7,6 +6,7 @@
     background-size: cover;
   }
   &__shadows {
+    @include centerSize(1600px);
     width: 100%;
     height: 100%;
     background-color: rgb(244, 244, 244, 0.7);

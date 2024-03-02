@@ -417,10 +417,6 @@ summary::-webkit-details-marker {
   grid-row: 1;
 }
 
-.subscribe-content {
-  padding-left: calc(50% - 800px);
-  padding-right: calc(50% - 800px);
-}
 .subscribe-content__background {
   background-image: url(../img/subscribe_background.svg);
   display: flex;
@@ -428,6 +424,8 @@ summary::-webkit-details-marker {
   background-size: cover;
 }
 .subscribe-content__shadows {
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
   width: 100%;
   height: 100%;
   background-color: rgba(244, 244, 244, 0.7);
@@ -502,8 +500,6 @@ summary::-webkit-details-marker {
 .footer {
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
-}
-.footer__background {
   background: #222224;
 }
 .footer__content {

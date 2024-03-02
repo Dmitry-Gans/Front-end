@@ -264,8 +264,9 @@ summary::-webkit-details-marker {
 .cart-content__bottom-button {
   width: 235px;
   height: 50px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
+  color: #000;
   border: 1px solid #a4a4a4;
   transition: all 0.3s;
 }
@@ -335,7 +336,7 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: column;
   background-color: #f5f3f3;
-  padding: 39px 34px 42px 43px;
+  padding: 39px 43px 42px;
 }
 .price__title {
   font-weight: 400;
@@ -349,7 +350,6 @@ summary::-webkit-details-marker {
 }
 .price__subtitle {
   text-align: right;
-  padding-right: 3px;
   margin-bottom: 21px;
 }
 .price__subtitle-color {
@@ -359,7 +359,6 @@ summary::-webkit-details-marker {
 }
 .price__line {
   border: 1px solid #e2e2e2;
-  margin-right: 8px;
   margin-bottom: 17px;
 }
 .price__button {
@@ -376,10 +375,6 @@ summary::-webkit-details-marker {
   color: #fff;
 }
 
-.subscribe-content {
-  padding-left: calc(50% - 800px);
-  padding-right: calc(50% - 800px);
-}
 .subscribe-content__background {
   background-image: url(../img/subscribe_background.svg);
   display: flex;
@@ -387,6 +382,8 @@ summary::-webkit-details-marker {
   background-size: cover;
 }
 .subscribe-content__shadows {
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
   width: 100%;
   height: 100%;
   background-color: rgba(244, 244, 244, 0.7);
@@ -461,8 +458,6 @@ summary::-webkit-details-marker {
 .footer {
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
-}
-.footer__background {
   background: #222224;
 }
 .footer__content {

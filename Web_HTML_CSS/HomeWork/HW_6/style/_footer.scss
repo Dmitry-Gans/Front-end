@@ -1,8 +1,6 @@
 .footer {
   @include centerSize(1600px);
-  &__background {
-    background: #222224;
-  }
+  background: #222224;
   &__content {
     display: flex;
     justify-content: center;
