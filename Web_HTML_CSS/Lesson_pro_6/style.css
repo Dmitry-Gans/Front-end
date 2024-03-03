@@ -1,127 +1,137 @@
-@keyframes duck-fly-left-1 {
+@keyframes dog-step {
   0% {
     left: -250px;
-    top: 12vh;
-  }
-  50% {
-    left: 24vw;
-    top: 76vh;
+    top: 70vh;
   }
   100% {
     left: 100vw;
-    top: 80vh;
+    top: 70vh;
+  }
+}
+@keyframes duck-fly-left-1 {
+  0% {
+    left: -250px;
+    top: 88vh;
+  }
+  50% {
+    left: 19vw;
+    top: 84vh;
+  }
+  100% {
+    left: 100vw;
+    top: 71vh;
   }
 }
 @keyframes duck-fly-left-2 {
   0% {
     left: -250px;
-    top: 45vh;
+    top: 24vh;
   }
   50% {
-    left: 63vw;
-    top: 43vh;
+    left: 16vw;
+    top: 49vh;
   }
   100% {
     left: 100vw;
-    top: 21vh;
+    top: 83vh;
   }
 }
 @keyframes duck-fly-left-3 {
   0% {
     left: -250px;
-    top: 16vh;
+    top: 41vh;
   }
   50% {
-    left: 59vw;
-    top: 72vh;
+    left: 1vw;
+    top: 70vh;
   }
   100% {
     left: 100vw;
-    top: 35vh;
+    top: 43vh;
   }
 }
 @keyframes duck-fly-left-4 {
   0% {
     left: -250px;
-    top: 40vh;
+    top: 31vh;
   }
   50% {
-    left: 48vw;
-    top: 58vh;
+    left: 20vw;
+    top: 65vh;
   }
   100% {
     left: 100vw;
-    top: 37vh;
+    top: 20vh;
   }
 }
 @keyframes duck-fly-left-5 {
   0% {
     left: -250px;
-    top: 63vh;
+    top: 40vh;
   }
   50% {
-    left: 36vw;
-    top: 58vh;
+    left: 8vw;
+    top: 6vh;
   }
   100% {
     left: 100vw;
-    top: 73vh;
+    top: 19vh;
   }
 }
 @keyframes duck-fly-left-6 {
   0% {
     left: -250px;
-    top: 49vh;
+    top: 58vh;
   }
   50% {
-    left: 12vw;
-    top: 54vh;
+    left: 31vw;
+    top: 59vh;
   }
   100% {
     left: 100vw;
-    top: 27vh;
+    top: 88vh;
   }
 }
 @keyframes duck-fly-left-7 {
   0% {
     left: -250px;
-    top: 42vh;
+    top: 14vh;
   }
   50% {
-    left: 13vw;
-    top: 9vh;
+    left: 17vw;
+    top: 34vh;
   }
   100% {
     left: 100vw;
-    top: 72vh;
+    top: 65vh;
   }
 }
 @keyframes duck-fly-left-8 {
   0% {
     left: -250px;
-    top: 82vh;
+    top: 19vh;
   }
   50% {
-    left: 33vw;
-    top: 65vh;
+    left: 15vw;
+    top: 9vh;
   }
   100% {
     left: 100vw;
-    top: 42vh;
+    top: 88vh;
   }
 }
 @keyframes duck-fly-left-9 {
   0% {
     left: -250px;
-    top: 50vh;
+    top: 1vh;
   }
   50% {
-    left: 18vw;
-    top: 31vh;
+    left: 29vw;
+    top: 72vh;
   }
   100% {
     left: 100vw;
-    top: 43vh;
+    top: 69vh;
   }
 }
 @keyframes duck-fly-left-10 {
@@ -130,152 +140,152 @@
     top: 33vh;
   }
   50% {
-    left: 25vw;
-    top: 56vh;
+    left: 14vw;
+    top: 69vh;
   }
   100% {
     left: 100vw;
-    top: 33vh;
+    top: 2vh;
   }
 }
 @keyframes duck-fly-right-2 {
   0% {
     right: -250px;
-    top: 20vh;
+    top: 55vh;
   }
   50% {
-    right: 60vw;
-    top: 52vh;
+    right: 17vw;
+    top: 69vh;
   }
   100% {
     right: 100vw;
-    top: 77vh;
+    top: 88vh;
   }
 }
 @keyframes duck-fly-right-3 {
   0% {
     right: -250px;
-    top: 63vh;
+    top: 87vh;
   }
   50% {
-    right: 27vw;
-    top: 41vh;
+    right: 45vw;
+    top: 88vh;
   }
   100% {
     right: 100vw;
-    top: 62vh;
+    top: 33vh;
   }
 }
 @keyframes duck-fly-right-4 {
   0% {
     right: -250px;
-    top: 80vh;
+    top: 18vh;
   }
   50% {
-    right: 57vw;
-    top: 89vh;
+    right: 23vw;
+    top: 33vh;
   }
   100% {
     right: 100vw;
-    top: 58vh;
+    top: 59vh;
   }
 }
 @keyframes duck-fly-right-5 {
   0% {
     right: -250px;
-    top: 33vh;
+    top: 28vh;
   }
   50% {
-    right: 50vw;
-    top: 22vh;
+    right: 7vw;
+    top: 18vh;
   }
   100% {
     right: 100vw;
-    top: 3vh;
+    top: 34vh;
   }
 }
 @keyframes duck-fly-right-6 {
   0% {
     right: -250px;
-    top: 78vh;
+    top: 34vh;
   }
   50% {
-    right: 30vw;
-    top: 82vh;
+    right: 34vw;
+    top: 49vh;
   }
   100% {
     right: 100vw;
-    top: 24vh;
+    top: 53vh;
   }
 }
 @keyframes duck-fly-right-7 {
   0% {
     right: -250px;
-    top: 78vh;
+    top: 24vh;
   }
   50% {
-    right: 31vw;
-    top: 46vh;
+    right: 32vw;
+    top: 81vh;
   }
   100% {
     right: 100vw;
-    top: 21vh;
+    top: 47vh;
   }
 }
 @keyframes duck-fly-right-8 {
   0% {
     right: -250px;
-    top: 25vh;
+    top: 9vh;
   }
   50% {
-    right: 61vw;
-    top: 58vh;
+    right: 11vw;
+    top: 57vh;
   }
   100% {
     right: 100vw;
-    top: 74vh;
+    top: 43vh;
   }
 }
 @keyframes duck-fly-right-9 {
   0% {
     right: -250px;
-    top: 85vh;
+    top: 9vh;
   }
   50% {
-    right: 64vw;
-    top: 40vh;
+    right: 60vw;
+    top: 44vh;
   }
   100% {
     right: 100vw;
-    top: 2vh;
+    top: 20vh;
   }
 }
 @keyframes duck-fly-right-10 {
   0% {
     right: -250px;
-    top: 45vh;
+    top: 35vh;
   }
   50% {
-    right: 14vw;
-    top: 57vh;
+    right: 43vw;
+    top: 63vh;
   }
   100% {
     right: 100vw;
-    top: 5vh;
+    top: 28vh;
   }
 }
 @keyframes duck-fly-right-11 {
   0% {
     right: -250px;
-    top: 3vh;
+    top: 80vh;
   }
   50% {
-    right: 45vw;
-    top: 67vh;
+    right: 40vw;
+    top: 64vh;
   }
   100% {
     right: 100vw;
-    top: 65vh;
+    top: 7vh;
   }
 }
 html,
@@ -389,8 +399,17 @@ body {
   content: counter(count);
 }
 
+.dog {
+  position: absolute;
+  width: 250px;
+  animation: dog-step 7s linear 2s both;
+}
+
 @media (width <= 768px) {
   .duck__img {
+    width: 200px;
+  }
+  .dog {
     width: 200px;
   }
 }
@@ -398,9 +417,15 @@ body {
   .duck__img {
     width: 150px;
   }
+  .dog {
+    width: 150px;
+  }
 }
 @media (width = 320px) {
   .duck__img {
+    width: 100px;
+  }
+  .dog {
     width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

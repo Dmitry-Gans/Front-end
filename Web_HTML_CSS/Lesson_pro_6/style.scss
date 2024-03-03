@@ -1,6 +1,18 @@
 $widthDuck: 250px;
 $countDuck: 10;
 
+@keyframes dog-step {
+  0% {
+    left: -250px;
+    top: 70vh;
+  }
+
+  100% {
+    left: 100vw;
+    top: 70vh;
+  }
+}
+
 @for $i from 1 through $countDuck {
   @keyframes duck-fly-left-#{$i} {
     0% {
@@ -97,8 +109,18 @@ body {
   }
 }
 
+.dog {
+  position: absolute;
+  width: 250px;
+  animation: dog-step 7s linear 2s both;
+}
+
 @media (width <= 768px) {
   .duck__img {
+    width: 200px;
+  }
+
+  .dog {
     width: 200px;
   }
 }
@@ -107,10 +129,18 @@ body {
   .duck__img {
     width: 150px;
   }
+
+  .dog {
+    width: 150px;
+  }
 }
 
 @media (width = 320px) {
   .duck__img {
+    width: 100px;
+  }
+
+  .dog {
     width: 100px;
   }
 }
