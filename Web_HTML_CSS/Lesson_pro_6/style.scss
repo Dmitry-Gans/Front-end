@@ -13,6 +13,18 @@ $countDuck: 10;
   }
 }
 
+@keyframes dog-step-reverse {
+  0% {
+    right: -400px;
+    top: 70vh;
+  }
+
+  100% {
+    right: 100vw;
+    top: 70vh;
+  }
+}
+
 @for $i from 1 through $countDuck {
   @keyframes duck-fly-left-#{$i} {
     0% {
@@ -113,6 +125,12 @@ body {
   position: absolute;
   width: 250px;
   animation: dog-step 7s linear 1s both;
+  &-1 {
+    position: absolute;
+    width: 400px;
+    animation: dog-step-reverse 7s linear 6s both;
+    transform: scale(-1, 1);
+  }
 }
 
 @media (width <= 768px) {
@@ -122,6 +140,9 @@ body {
 
   .dog {
     width: 200px;
+    &-1 {
+      width: 350px;
+    }
   }
 }
 
@@ -132,15 +153,21 @@ body {
 
   .dog {
     width: 150px;
+    &-1 {
+      width: 280px;
+    }
   }
 }
 
 @media (width = 320px) {
   .duck__img {
-    width: 100px;
+    width: 130px;
   }
 
   .dog {
-    width: 100px;
+    width: 130px;
+    &-1 {
+      width: 250px;
+    }
   }
 }
