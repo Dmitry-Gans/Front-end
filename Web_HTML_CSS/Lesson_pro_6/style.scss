@@ -112,7 +112,7 @@ body {
 .dog {
   position: absolute;
   width: 250px;
-  animation: dog-step 7s linear both;
+  animation: dog-step 7s linear 1s both;
 }
 
 @media (width <= 768px) {
