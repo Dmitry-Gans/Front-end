@@ -1,0 +1,38 @@
+.registration-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 96px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 360px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  &__input {
+    width: 360px;
+    height: 45px;
+    border: 1px solid #a4a4a4;
+    outline: none;
+    padding: 15px 17px;
+    &::placeholder {
+      font-weight: 300;
+      font-size: 13px;
+      color: #b1b1b1;
+    }
+  }
+}

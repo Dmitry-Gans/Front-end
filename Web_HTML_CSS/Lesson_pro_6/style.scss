@@ -1,0 +1,92 @@
+$widthDuck: 250px;
+$countDuck: 10;
+
+@for $i from 1 through $countDuck {
+  @keyframes duck-fly-#{$i} {
+    0% {
+      left: -$widthDuck;
+      top: random(90) + vh;
+    }
+    50% {
+      left: random(65) + vw;
+      top: random(90) + vh;
+    }
+    100% {
+      left: 100vw;
+      top: random(90) + vh;
+    }
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./img/background-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.duck {
+  position: absolute;
+  &__check {
+    position: absolute;
+    visibility: hidden;
+    left: -99999999px;
+
+    &:checked {
+      counter-increment: count;
+    }
+
+    &:checked ~ .duck__img {
+      display: none;
+    }
+  }
+
+  &__img {
+    max-width: $widthDuck;
+    min-width: 100px;
+  }
+
+  @for $i from 1 through $countDuck {
+    &_#{$i} {
+      animation: duck-fly-#{$i} 6s ease-in #{$i + 1}s both;
+    }
+  }
+}
+
+.counter-info {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  margin: 0;
+
+  &::before {
+    content: counter(count);
+  }
+}
+
+@media (width <= 768px) {
+  .duck__img {
+    width: 200px;
+  }
+}
+
+@media (width <= 425px) {
+  .duck__img {
+    width: 150px;
+  }
+}
+
+@media (width = 320px) {
+  .duck__img {
+    width: 100px;
+  }
+}

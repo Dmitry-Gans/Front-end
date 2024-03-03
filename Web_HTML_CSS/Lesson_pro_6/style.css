@@ -1,0 +1,230 @@
+@keyframes duck-fly-1 {
+  0% {
+    left: -250px;
+    top: 15vh;
+  }
+  50% {
+    left: 59vw;
+    top: 38vh;
+  }
+  100% {
+    left: 100vw;
+    top: 67vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -250px;
+    top: 65vh;
+  }
+  50% {
+    left: 11vw;
+    top: 59vh;
+  }
+  100% {
+    left: 100vw;
+    top: 81vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -250px;
+    top: 10vh;
+  }
+  50% {
+    left: 30vw;
+    top: 22vh;
+  }
+  100% {
+    left: 100vw;
+    top: 63vh;
+  }
+}
+@keyframes duck-fly-4 {
+  0% {
+    left: -250px;
+    top: 82vh;
+  }
+  50% {
+    left: 14vw;
+    top: 46vh;
+  }
+  100% {
+    left: 100vw;
+    top: 11vh;
+  }
+}
+@keyframes duck-fly-5 {
+  0% {
+    left: -250px;
+    top: 74vh;
+  }
+  50% {
+    left: 31vw;
+    top: 54vh;
+  }
+  100% {
+    left: 100vw;
+    top: 88vh;
+  }
+}
+@keyframes duck-fly-6 {
+  0% {
+    left: -250px;
+    top: 59vh;
+  }
+  50% {
+    left: 43vw;
+    top: 31vh;
+  }
+  100% {
+    left: 100vw;
+    top: 32vh;
+  }
+}
+@keyframes duck-fly-7 {
+  0% {
+    left: -250px;
+    top: 60vh;
+  }
+  50% {
+    left: 2vw;
+    top: 4vh;
+  }
+  100% {
+    left: 100vw;
+    top: 18vh;
+  }
+}
+@keyframes duck-fly-8 {
+  0% {
+    left: -250px;
+    top: 22vh;
+  }
+  50% {
+    left: 58vw;
+    top: 56vh;
+  }
+  100% {
+    left: 100vw;
+    top: 66vh;
+  }
+}
+@keyframes duck-fly-9 {
+  0% {
+    left: -250px;
+    top: 48vh;
+  }
+  50% {
+    left: 27vw;
+    top: 86vh;
+  }
+  100% {
+    left: 100vw;
+    top: 71vh;
+  }
+}
+@keyframes duck-fly-10 {
+  0% {
+    left: -250px;
+    top: 54vh;
+  }
+  50% {
+    left: 31vw;
+    top: 84vh;
+  }
+  100% {
+    left: 100vw;
+    top: 50vh;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./img/background-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.duck {
+  position: absolute;
+}
+.duck__check {
+  position: absolute;
+  visibility: hidden;
+  left: -99999999px;
+}
+.duck__check:checked {
+  counter-increment: count;
+}
+.duck__check:checked ~ .duck__img {
+  display: none;
+}
+.duck__img {
+  max-width: 250px;
+  min-width: 100px;
+}
+.duck_1 {
+  animation: duck-fly-1 6s ease-in 2s both;
+}
+.duck_2 {
+  animation: duck-fly-2 6s ease-in 3s both;
+}
+.duck_3 {
+  animation: duck-fly-3 6s ease-in 4s both;
+}
+.duck_4 {
+  animation: duck-fly-4 6s ease-in 5s both;
+}
+.duck_5 {
+  animation: duck-fly-5 6s ease-in 6s both;
+}
+.duck_6 {
+  animation: duck-fly-6 6s ease-in 7s both;
+}
+.duck_7 {
+  animation: duck-fly-7 6s ease-in 8s both;
+}
+.duck_8 {
+  animation: duck-fly-8 6s ease-in 9s both;
+}
+.duck_9 {
+  animation: duck-fly-9 6s ease-in 10s both;
+}
+.duck_10 {
+  animation: duck-fly-10 6s ease-in 11s both;
+}
+
+.counter-info {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  margin: 0;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+@media (width <= 768px) {
+  .duck__img {
+    width: 200px;
+  }
+}
+@media (width <= 425px) {
+  .duck__img {
+    width: 150px;
+  }
+}
+@media (width = 320px) {
+  .duck__img {
+    width: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */
