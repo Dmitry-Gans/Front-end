@@ -1,141 +1,141 @@
 @keyframes duck-fly-1 {
   0% {
     left: -250px;
-    top: 15vh;
+    top: 3vh;
   }
   50% {
-    left: 59vw;
-    top: 38vh;
+    left: 49vw;
+    top: 2vh;
   }
   100% {
     left: 100vw;
-    top: 67vh;
+    top: 58vh;
   }
 }
 @keyframes duck-fly-2 {
   0% {
     left: -250px;
-    top: 65vh;
+    top: 50vh;
   }
   50% {
-    left: 11vw;
-    top: 59vh;
+    left: 39vw;
+    top: 29vh;
   }
   100% {
     left: 100vw;
-    top: 81vh;
+    top: 77vh;
   }
 }
 @keyframes duck-fly-3 {
   0% {
     left: -250px;
-    top: 10vh;
+    top: 82vh;
   }
   50% {
-    left: 30vw;
-    top: 22vh;
+    left: 16vw;
+    top: 24vh;
   }
   100% {
     left: 100vw;
-    top: 63vh;
+    top: 77vh;
   }
 }
 @keyframes duck-fly-4 {
   0% {
     left: -250px;
-    top: 82vh;
+    top: 74vh;
   }
   50% {
-    left: 14vw;
-    top: 46vh;
+    left: 51vw;
+    top: 56vh;
   }
   100% {
     left: 100vw;
-    top: 11vh;
+    top: 28vh;
   }
 }
 @keyframes duck-fly-5 {
   0% {
     left: -250px;
-    top: 74vh;
+    top: 4vh;
   }
   50% {
-    left: 31vw;
+    left: 56vw;
     top: 54vh;
   }
   100% {
     left: 100vw;
-    top: 88vh;
+    top: 45vh;
   }
 }
 @keyframes duck-fly-6 {
   0% {
     left: -250px;
-    top: 59vh;
+    top: 35vh;
   }
   50% {
-    left: 43vw;
-    top: 31vh;
+    left: 51vw;
+    top: 28vh;
   }
   100% {
     left: 100vw;
-    top: 32vh;
+    top: 7vh;
   }
 }
 @keyframes duck-fly-7 {
   0% {
     left: -250px;
-    top: 60vh;
+    top: 5vh;
   }
   50% {
-    left: 2vw;
-    top: 4vh;
+    left: 15vw;
+    top: 80vh;
   }
   100% {
     left: 100vw;
-    top: 18vh;
+    top: 61vh;
   }
 }
 @keyframes duck-fly-8 {
   0% {
     left: -250px;
-    top: 22vh;
+    top: 11vh;
   }
   50% {
-    left: 58vw;
-    top: 56vh;
+    left: 46vw;
+    top: 23vh;
   }
   100% {
     left: 100vw;
-    top: 66vh;
+    top: 89vh;
   }
 }
 @keyframes duck-fly-9 {
   0% {
     left: -250px;
-    top: 48vh;
+    top: 34vh;
   }
   50% {
-    left: 27vw;
-    top: 86vh;
+    left: 39vw;
+    top: 52vh;
   }
   100% {
     left: 100vw;
-    top: 71vh;
+    top: 13vh;
   }
 }
 @keyframes duck-fly-10 {
   0% {
     left: -250px;
-    top: 54vh;
+    top: 75vh;
   }
   50% {
-    left: 31vw;
-    top: 84vh;
+    left: 17vw;
+    top: 60vh;
   }
   100% {
     left: 100vw;
-    top: 50vh;
+    top: 11vh;
   }
 }
 html,
@@ -173,34 +173,34 @@ body {
   min-width: 100px;
 }
 .duck_1 {
-  animation: duck-fly-1 6s ease-in 2s both;
+  animation: duck-fly-1 4s ease-in 2s both;
 }
 .duck_2 {
-  animation: duck-fly-2 6s ease-in 3s both;
+  animation: duck-fly-2 4s ease-in 3s both;
 }
 .duck_3 {
-  animation: duck-fly-3 6s ease-in 4s both;
+  animation: duck-fly-3 4s ease-in 4s both;
 }
 .duck_4 {
-  animation: duck-fly-4 6s ease-in 5s both;
+  animation: duck-fly-4 4s ease-in 5s both;
 }
 .duck_5 {
-  animation: duck-fly-5 6s ease-in 6s both;
+  animation: duck-fly-5 4s ease-in 6s both;
 }
 .duck_6 {
-  animation: duck-fly-6 6s ease-in 7s both;
+  animation: duck-fly-6 4s ease-in 7s both;
 }
 .duck_7 {
-  animation: duck-fly-7 6s ease-in 8s both;
+  animation: duck-fly-7 4s ease-in 8s both;
 }
 .duck_8 {
-  animation: duck-fly-8 6s ease-in 9s both;
+  animation: duck-fly-8 4s ease-in 9s both;
 }
 .duck_9 {
-  animation: duck-fly-9 6s ease-in 10s both;
+  animation: duck-fly-9 4s ease-in 10s both;
 }
 .duck_10 {
-  animation: duck-fly-10 6s ease-in 11s both;
+  animation: duck-fly-10 4s ease-in 11s both;
 }
 
 .counter-info {
