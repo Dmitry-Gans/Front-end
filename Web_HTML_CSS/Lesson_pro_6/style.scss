@@ -57,7 +57,7 @@ body {
 
   @for $i from 1 through $countDuck {
     &_#{$i} {
-      animation: duck-fly-#{$i} 4s ease-in #{$i + 1}s both;
+      animation: duck-fly-#{$i} 4s linear #{$i + 1}s both;
     }
   }
 }
