@@ -25,12 +25,11 @@ img {
   display: block;
 }
 
-a, summary, label, input {
+a, summary, label, input, button {
   cursor: pointer;
 }
 
 button {
-  cursor: pointer;
   background: none;
   border: none;
 }
@@ -212,6 +211,86 @@ summary::-webkit-details-marker {
   font-weight: 300;
   font-size: 13px;
   color: #b1b1b1;
+}
+.registration-content__gender {
+  display: flex;
+  padding: 32px 0;
+}
+.registration-content__label {
+  display: flex;
+}
+.registration-content__radio {
+  margin-right: 10px;
+  border: 1px solid #a4a4a4;
+  outline: none;
+}
+.registration-content__summary {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 11px;
+  color: #000;
+}
+.registration-content__text {
+  font-weight: 400;
+  font-size: 13px;
+  color: #b1b1b1;
+  padding-top: 15px;
+  padding-bottom: 39px;
+}
+.registration-content__button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 167px;
+  height: 50px;
+  color: #F16D7F;
+  background-color: #fff;
+  border: 1px solid #F16D7F;
+  transition: all 0.3s;
+}
+.registration-content__button path {
+  fill: #F16D7F;
+}
+.registration-content__button:hover, .registration-content__button:hover path {
+  color: #fff;
+  fill: #fff;
+  background-color: #F16D7F;
+}
+.registration-content__right {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 22px;
+  width: 652px;
+  color: #000;
+  font-weight: 300;
+  font-size: 24px;
+}
+.registration-content__right-loyalty {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.registration-content__right-checkbox {
+  display: flex;
+}
+.registration-content__right-input {
+  position: absolute;
+  visibility: hidden;
+  left: -999999999px;
+}
+.registration-content__right-input:checked ~ .registration-content__right-summary, .registration-content__right-input:checked ~ .registration-content__right-summary svg {
+  color: #F16D7F;
+  visibility: visible;
+}
+.registration-content__right-summary {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.registration-content__right-summary svg {
+  margin-right: 22px;
+  visibility: hidden;
 }
 
 .subscribe-content__background {
