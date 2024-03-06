@@ -24,7 +24,11 @@ img {
   display: block;
 }
 
-a, summary, label, input, button {
+a,
+summary,
+label,
+input,
+button {
   cursor: pointer;
 }
 
@@ -43,6 +47,7 @@ summary::-webkit-details-marker {
 
 .header {
   background-color: #222222;
+  height: 75px;
   &__size {
     display: flex;
     flex-wrap: wrap;
@@ -90,14 +95,14 @@ summary::-webkit-details-marker {
     z-index: 2;
   }
 
-  &__input-burger:checked ~ &__label{
+  &__input-burger:checked ~ &__label {
     svg {
       fill: $colorText;
     }
   }
 
   &__burger-menu {
-    top: 56px;
+    top: 57px;
     box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
     position: absolute;
     right: -470px;

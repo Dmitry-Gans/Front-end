@@ -25,7 +25,11 @@ img {
   display: block;
 }
 
-a, summary, label, input, button {
+a,
+summary,
+label,
+input,
+button {
   cursor: pointer;
 }
 
@@ -45,6 +49,7 @@ summary::-webkit-details-marker {
 
 .header {
   background-color: #222222;
+  height: 75px;
 }
 .header__size {
   display: flex;
@@ -92,7 +97,7 @@ summary::-webkit-details-marker {
   fill: #F16D7F;
 }
 .nav__burger-menu {
-  top: 56px;
+  top: 57px;
   box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
   position: absolute;
   right: -470px;
