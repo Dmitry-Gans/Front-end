@@ -60,8 +60,6 @@
   }
 
   .products-content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 16px;
     padding-bottom: 32px;
   }
@@ -70,7 +68,7 @@
     padding-bottom: 64px;
   }
 
-  .privileges-content__background {
+  .privileges-content__box {
     flex-direction: column;
     gap: 48px;
     align-items: center;
@@ -186,8 +184,6 @@
 
   .products-content {
     @include centerSize(360px);
-    grid-template-rows: repeat(6, auto);
-    grid-auto-flow: column dense;
     gap: 16px;
     padding-bottom: 40px;
     &__text {
@@ -201,7 +197,7 @@
   }
 
   .privileges-content {
-    &__background {
+    &__box {
       padding-top: 48px;
       padding-bottom: 81px;
       gap: 46px;

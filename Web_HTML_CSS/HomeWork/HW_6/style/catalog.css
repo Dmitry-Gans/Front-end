@@ -99,6 +99,9 @@ summary::-webkit-details-marker {
   transition: right 0.3s;
   visibility: hidden;
 }
+.nav__link:hover path {
+  fill: #F16D7F;
+}
 
 .menu {
   width: 232px;
@@ -297,8 +300,7 @@ summary::-webkit-details-marker {
 
 .products-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
   padding-bottom: 48px;
 }
@@ -391,11 +393,6 @@ summary::-webkit-details-marker {
 .all-products__button:hover {
   background-color: #f16d7f;
   color: #ffffff;
-}
-
-.products-content {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
 }
 
 .pagination {
@@ -645,15 +642,13 @@ summary::-webkit-details-marker {
     padding-bottom: 72px;
   }
   .products-content {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 16px;
     padding-bottom: 32px;
   }
   .all-products {
     padding-bottom: 64px;
   }
-  .privileges-content__background {
+  .privileges-content__box {
     flex-direction: column;
     gap: 48px;
     align-items: center;
@@ -756,8 +751,6 @@ summary::-webkit-details-marker {
   .products-content {
     padding-left: calc(50% - 180px);
     padding-right: calc(50% - 180px);
-    grid-template-rows: repeat(6, auto);
-    grid-auto-flow: column dense;
     gap: 16px;
     padding-bottom: 40px;
   }
@@ -768,7 +761,7 @@ summary::-webkit-details-marker {
   .all-products {
     padding-bottom: 96px;
   }
-  .privileges-content__background {
+  .privileges-content__box {
     padding-top: 48px;
     padding-bottom: 81px;
     gap: 46px;
@@ -803,5 +796,22 @@ summary::-webkit-details-marker {
   }
   .footer__content p {
     width: 251px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .filter {
+    height: 81px;
+    padding-top: 12px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+  .products-content {
+    padding-bottom: 40px;
+  }
+  .products-content__item3 {
+    display: none;
+  }
+  .pagination {
+    padding-bottom: 63px;
   }
 }/*# sourceMappingURL=catalog.css.map */

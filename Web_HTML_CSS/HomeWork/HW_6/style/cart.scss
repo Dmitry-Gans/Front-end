@@ -1,10 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap");
 
-@import 'vars';
-@import 'mixins';
-@import 'header';
-@import 'breadcrumb';
-@import 'cart-content';
-@import 'subscribe-content';
-@import 'footer';
-@import 'media';
+@import "vars";
+@import "mixins";
+@import "header";
+@import "breadcrumb";
+@import "cart-content";
+@import "subscribe-content";
+@import "footer";
+@import "media";
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart-content {
+    padding-top: 59px;
+
+    &__selected-item {
+      width: 734px;
+    }
+
+    &__info {
+      width: 472px;
+    }
+
+    &__bottom-box {
+      padding-top: 62px;
+      padding-bottom: 64px;
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+    }
+
+    &__address-and-price {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+
+  .address {
+    margin-top: 0;
+  }
+
+  .price {
+    margin-top: 39px;
+  }
+}

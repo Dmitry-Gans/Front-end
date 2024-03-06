@@ -104,6 +104,10 @@ summary::-webkit-details-marker {
     transition: right 0.3s;
     visibility: hidden;
   }
+
+  &__link:hover path {
+    fill: $colorText;
+  }
 }
 
 .menu {
