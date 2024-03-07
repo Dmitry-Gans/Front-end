@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes lampRise-1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 72vh;
+    right: 28vw;
+    display: none;
+  }
+}
+@keyframes lampRise-2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 23vh;
+    left: 39vw;
+    display: none;
+  }
+}
+@keyframes lampRise-3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 27vh;
+    right: 19vw;
+    display: none;
+  }
+}
+body {
+  background: url(./img/zemlya.jpg) no-repeat center;
+  width: 100vw;
+  height: 100vh;
+  counter-reset: count;
+}
+
+svg {
+  width: 50px;
+  fill: yellow;
+}
+
+.lamp {
+  position: absolute;
+}
+.lamp1 {
+  animation: lampRise-1 3s 0s both;
+}
+.lamp2 {
+  animation: lampRise-2 3s 3s both;
+}
+.lamp3 {
+  animation: lampRise-3 3s 6s both;
+}
+.lamp__input {
+  position: absolute;
+  left: -9999999px;
+  visibility: hidden;
+}
+.lamp__input:checked {
+  counter-increment: count;
+}
+
+.counter {
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.counter::before {
+  content: counter(count);
+}/*# sourceMappingURL=style.css.map */

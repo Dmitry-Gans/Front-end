@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes lampRise-1 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: random(100) + vh;
+    right: random(100) + vw;
+    display: none;
+  }
+}
+
+@keyframes lampRise-2 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: random(80) + vh;
+    left: random(70) + vw;
+    display: none;
+  }
+}
+
+@keyframes lampRise-3 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: random(75) + vh;
+    right: random(20) + vw;
+    display: none;
+  }
+}
+
+body {
+  background: url(./img/zemlya.jpg) no-repeat center;
+  width: 100vw;
+  height: 100vh;
+  counter-reset: count; //Называем свою  переменную для счетчика
+}
+
+svg {
+  width: 50px;
+  fill: yellow;
+}
+
+.lamp {
+  position: absolute;
+
+  &1 {
+    animation: lampRise-1 3s 0s both;
+  }
+
+  &2 {
+    animation: lampRise-2 3s 3s both;
+  }
+
+  &3 {
+    animation: lampRise-3 3s 6s both;
+  }
+  &__input {
+    position: absolute;
+    left: -9999999px;
+    visibility: hidden;
+
+    &:checked {
+      counter-increment: count;
+    }
+  }
+}
+
+.counter {
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  &::before {
+    content: counter(count);
+  }
+}
