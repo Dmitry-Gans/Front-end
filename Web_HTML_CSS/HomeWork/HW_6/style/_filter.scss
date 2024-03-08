@@ -1,8 +1,11 @@
 .filter {
-  height: 132px;
-  display: flex;
-  gap: 30px;
-  padding-top: 39px;
+  &__size {
+    height: 132px;
+    display: flex;
+    gap: 30px;
+    padding-top: 39px;
+    padding-bottom: 64px;
+  }
 
   &__details {
     width: 360px;
@@ -72,7 +75,7 @@
     font-size: 14px;
     color: $colorText2;
     &:hover {
-        color: $colorText;
+      color: $colorText;
     }
   }
 
@@ -133,7 +136,7 @@
     font-size: 14px;
     color: $colorText2;
     &:hover {
-        color: $colorText;
+      color: $colorText;
     }
   }
 }

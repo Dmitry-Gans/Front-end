@@ -13,7 +13,7 @@
 @import "media";
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .filter {
+  .filter__size {
     height: 81px;
     padding-top: 12px;
     padding-bottom: 40px;
@@ -45,11 +45,11 @@
 
   .filter {
     @include centerSize(360px);
-    height: 80px;
     justify-content: center;
-    padding-top: 12px;
 
     &__size {
+      padding-top: 12px;
+      height: 80px;
       width: 360px;
       position: relative;
     }

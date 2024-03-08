@@ -21,281 +21,281 @@
 @keyframes duck-fly-left-1 {
   0% {
     left: -250px;
-    top: 44vh;
+    top: 2vh;
   }
   50% {
-    left: 49vw;
-    top: 46vh;
+    left: 48vw;
+    top: 1vh;
   }
   100% {
     left: 100vw;
-    top: 41vh;
+    top: 18vh;
   }
 }
 @keyframes duck-fly-left-2 {
   0% {
     left: -250px;
-    top: 38vh;
+    top: 15vh;
   }
   50% {
-    left: 64vw;
-    top: 48vh;
-  }
-  100% {
-    left: 100vw;
-    top: 57vh;
-  }
-}
-@keyframes duck-fly-left-3 {
-  0% {
-    left: -250px;
-    top: 57vh;
-  }
-  50% {
-    left: 39vw;
-    top: 34vh;
-  }
-  100% {
-    left: 100vw;
-    top: 33vh;
-  }
-}
-@keyframes duck-fly-left-4 {
-  0% {
-    left: -250px;
-    top: 2vh;
-  }
-  50% {
-    left: 42vw;
-    top: 40vh;
+    left: 56vw;
+    top: 6vh;
   }
   100% {
     left: 100vw;
     top: 12vh;
   }
 }
-@keyframes duck-fly-left-5 {
+@keyframes duck-fly-left-3 {
   0% {
     left: -250px;
-    top: 26vh;
+    top: 13vh;
   }
   50% {
-    left: 54vw;
-    top: 59vh;
+    left: 51vw;
+    top: 27vh;
   }
   100% {
     left: 100vw;
-    top: 59vh;
-  }
-}
-@keyframes duck-fly-left-6 {
-  0% {
-    left: -250px;
-    top: 53vh;
-  }
-  50% {
-    left: 33vw;
-    top: 50vh;
-  }
-  100% {
-    left: 100vw;
-    top: 37vh;
-  }
-}
-@keyframes duck-fly-left-7 {
-  0% {
-    left: -250px;
-    top: 48vh;
-  }
-  50% {
-    left: 9vw;
-    top: 44vh;
-  }
-  100% {
-    left: 100vw;
-    top: 56vh;
-  }
-}
-@keyframes duck-fly-left-8 {
-  0% {
-    left: -250px;
-    top: 18vh;
-  }
-  50% {
-    left: 65vw;
     top: 17vh;
   }
-  100% {
-    left: 100vw;
-    top: 34vh;
-  }
 }
-@keyframes duck-fly-left-9 {
+@keyframes duck-fly-left-4 {
   0% {
     left: -250px;
-    top: 4vh;
+    top: 21vh;
   }
   50% {
-    left: 56vw;
-    top: 27vh;
+    left: 38vw;
+    top: 6vh;
   }
   100% {
     left: 100vw;
     top: 3vh;
   }
 }
-@keyframes duck-fly-left-10 {
+@keyframes duck-fly-left-5 {
   0% {
     left: -250px;
-    top: 11vh;
+    top: 48vh;
   }
   50% {
-    left: 52vw;
-    top: 57vh;
+    left: 49vw;
+    top: 18vh;
+  }
+  100% {
+    left: 100vw;
+    top: 36vh;
+  }
+}
+@keyframes duck-fly-left-6 {
+  0% {
+    left: -250px;
+    top: 48vh;
+  }
+  50% {
+    left: 63vw;
+    top: 17vh;
+  }
+  100% {
+    left: 100vw;
+    top: 13vh;
+  }
+}
+@keyframes duck-fly-left-7 {
+  0% {
+    left: -250px;
+    top: 2vh;
+  }
+  50% {
+    left: 17vw;
+    top: 34vh;
+  }
+  100% {
+    left: 100vw;
+    top: 52vh;
+  }
+}
+@keyframes duck-fly-left-8 {
+  0% {
+    left: -250px;
+    top: 45vh;
+  }
+  50% {
+    left: 14vw;
+    top: 21vh;
   }
   100% {
     left: 100vw;
     top: 59vh;
   }
 }
+@keyframes duck-fly-left-9 {
+  0% {
+    left: -250px;
+    top: 20vh;
+  }
+  50% {
+    left: 3vw;
+    top: 1vh;
+  }
+  100% {
+    left: 100vw;
+    top: 33vh;
+  }
+}
+@keyframes duck-fly-left-10 {
+  0% {
+    left: -250px;
+    top: 33vh;
+  }
+  50% {
+    left: 33vw;
+    top: 12vh;
+  }
+  100% {
+    left: 100vw;
+    top: 55vh;
+  }
+}
 @keyframes duck-fly-right-2 {
   0% {
     right: -250px;
-    top: 21vh;
+    top: 9vh;
   }
   50% {
-    right: 4vw;
-    top: 30vh;
-  }
-  100% {
-    right: 100vw;
-    top: 30vh;
-  }
-}
-@keyframes duck-fly-right-3 {
-  0% {
-    right: -250px;
-    top: 24vh;
-  }
-  50% {
-    right: 58vw;
-    top: 22vh;
+    right: 48vw;
+    top: 28vh;
   }
   100% {
     right: 100vw;
     top: 50vh;
   }
 }
+@keyframes duck-fly-right-3 {
+  0% {
+    right: -250px;
+    top: 17vh;
+  }
+  50% {
+    right: 44vw;
+    top: 7vh;
+  }
+  100% {
+    right: 100vw;
+    top: 5vh;
+  }
+}
 @keyframes duck-fly-right-4 {
   0% {
     right: -250px;
-    top: 55vh;
+    top: 58vh;
   }
   50% {
-    right: 9vw;
-    top: 36vh;
-  }
-  100% {
-    right: 100vw;
-    top: 28vh;
-  }
-}
-@keyframes duck-fly-right-5 {
-  0% {
-    right: -250px;
-    top: 2vh;
-  }
-  50% {
-    right: 62vw;
-    top: 45vh;
-  }
-  100% {
-    right: 100vw;
-    top: 31vh;
-  }
-}
-@keyframes duck-fly-right-6 {
-  0% {
-    right: -250px;
-    top: 36vh;
-  }
-  50% {
-    right: 37vw;
-    top: 55vh;
-  }
-  100% {
-    right: 100vw;
-    top: 49vh;
-  }
-}
-@keyframes duck-fly-right-7 {
-  0% {
-    right: -250px;
-    top: 4vh;
-  }
-  50% {
-    right: 19vw;
-    top: 26vh;
-  }
-  100% {
-    right: 100vw;
-    top: 37vh;
-  }
-}
-@keyframes duck-fly-right-8 {
-  0% {
-    right: -250px;
-    top: 15vh;
-  }
-  50% {
-    right: 26vw;
-    top: 16vh;
-  }
-  100% {
-    right: 100vw;
+    right: 42vw;
     top: 17vh;
-  }
-}
-@keyframes duck-fly-right-9 {
-  0% {
-    right: -250px;
-    top: 19vh;
-  }
-  50% {
-    right: 23vw;
-    top: 8vh;
-  }
-  100% {
-    right: 100vw;
-    top: 22vh;
-  }
-}
-@keyframes duck-fly-right-10 {
-  0% {
-    right: -250px;
-    top: 48vh;
-  }
-  50% {
-    right: 21vw;
-    top: 10vh;
   }
   100% {
     right: 100vw;
     top: 12vh;
   }
 }
-@keyframes duck-fly-right-11 {
+@keyframes duck-fly-right-5 {
+  0% {
+    right: -250px;
+    top: 13vh;
+  }
+  50% {
+    right: 4vw;
+    top: 39vh;
+  }
+  100% {
+    right: 100vw;
+    top: 39vh;
+  }
+}
+@keyframes duck-fly-right-6 {
+  0% {
+    right: -250px;
+    top: 44vh;
+  }
+  50% {
+    right: 43vw;
+    top: 2vh;
+  }
+  100% {
+    right: 100vw;
+    top: 51vh;
+  }
+}
+@keyframes duck-fly-right-7 {
   0% {
     right: -250px;
     top: 35vh;
   }
   50% {
-    right: 8vw;
-    top: 8vh;
+    right: 47vw;
+    top: 63vh;
   }
   100% {
     right: 100vw;
-    top: 62vh;
+    top: 20vh;
+  }
+}
+@keyframes duck-fly-right-8 {
+  0% {
+    right: -250px;
+    top: 2vh;
+  }
+  50% {
+    right: 33vw;
+    top: 44vh;
+  }
+  100% {
+    right: 100vw;
+    top: 31vh;
+  }
+}
+@keyframes duck-fly-right-9 {
+  0% {
+    right: -250px;
+    top: 27vh;
+  }
+  50% {
+    right: 59vw;
+    top: 33vh;
+  }
+  100% {
+    right: 100vw;
+    top: 60vh;
+  }
+}
+@keyframes duck-fly-right-10 {
+  0% {
+    right: -250px;
+    top: 23vh;
+  }
+  50% {
+    right: 55vw;
+    top: 42vh;
+  }
+  100% {
+    right: 100vw;
+    top: 49vh;
+  }
+}
+@keyframes duck-fly-right-11 {
+  0% {
+    right: -250px;
+    top: 65vh;
+  }
+  50% {
+    right: 63vw;
+    top: 49vh;
+  }
+  100% {
+    right: 100vw;
+    top: 34vh;
   }
 }
 html,

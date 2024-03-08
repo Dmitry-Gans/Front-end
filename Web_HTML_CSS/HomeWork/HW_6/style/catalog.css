@@ -204,11 +204,12 @@ summary::-webkit-details-marker {
   color: #F16D7F;
 }
 
-.filter {
+.filter__size {
   height: 132px;
   display: flex;
   gap: 30px;
   padding-top: 39px;
+  padding-bottom: 64px;
 }
 .filter__details {
   width: 360px;
@@ -834,7 +835,7 @@ summary::-webkit-details-marker {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .filter {
+  .filter__size {
     height: 81px;
     padding-top: 12px;
     padding-bottom: 40px;
@@ -863,11 +864,11 @@ summary::-webkit-details-marker {
   .filter {
     padding-left: calc(50% - 180px);
     padding-right: calc(50% - 180px);
-    height: 80px;
     justify-content: center;
-    padding-top: 12px;
   }
   .filter__size {
+    padding-top: 12px;
+    height: 80px;
     width: 360px;
     position: relative;
   }
