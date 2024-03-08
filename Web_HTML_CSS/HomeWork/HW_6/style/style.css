@@ -91,7 +91,7 @@ summary::-webkit-details-marker {
 .nav__input-burger:checked ~ .nav__burger-menu {
   right: 0;
   visibility: visible;
-  z-index: 2;
+  z-index: 4;
 }
 .nav__input-burger:checked ~ .nav__label svg {
   fill: #F16D7F;

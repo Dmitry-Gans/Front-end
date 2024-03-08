@@ -24,3 +24,18 @@
     }
   }
 }
+
+@media (max-width: 767px) and (min-width: 375px) {
+  .breadcrumb {
+    &__content {
+      justify-content: center;
+    }
+  }
+
+  .registration-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 40px;
+  }
+}

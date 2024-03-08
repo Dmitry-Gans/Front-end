@@ -91,7 +91,7 @@ summary::-webkit-details-marker {
 .nav__input-burger:checked ~ .nav__burger-menu {
   right: 0;
   visibility: visible;
-  z-index: 2;
+  z-index: 4;
 }
 .nav__input-burger:checked ~ .nav__label svg {
   fill: #F16D7F;
@@ -642,5 +642,16 @@ summary::-webkit-details-marker {
   }
   .registration-content__right-summary span {
     padding-left: 45px;
+  }
+}
+@media (max-width: 767px) and (min-width: 375px) {
+  .breadcrumb__content {
+    justify-content: center;
+  }
+  .registration-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 40px;
   }
 }/*# sourceMappingURL=registration.css.map */

@@ -15,8 +15,8 @@
   }
   100% {
     opacity: 0;
-    top: 72vh;
-    right: 28vw;
+    top: 57vh;
+    right: 31vw;
     display: none;
   }
 }
@@ -32,8 +32,8 @@
   }
   100% {
     opacity: 0;
-    top: 23vh;
-    left: 39vw;
+    top: 2vh;
+    left: 2vw;
     display: none;
   }
 }
@@ -49,8 +49,8 @@
   }
   100% {
     opacity: 0;
-    top: 27vh;
-    right: 19vw;
+    top: 74vh;
+    right: 17vw;
     display: none;
   }
 }

@@ -92,7 +92,7 @@ summary::-webkit-details-marker {
   &__input-burger:checked ~ &__burger-menu {
     right: 0;
     visibility: visible;
-    z-index: 2;
+    z-index: 4;
   }
 
   &__input-burger:checked ~ &__label {
