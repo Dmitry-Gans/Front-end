@@ -118,6 +118,29 @@ summary::-webkit-details-marker {
   background-color: #ffffff;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
+}
+.menu__nav {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.menu__nav svg {
+  width: 25px;
+}
+.menu__nav path {
+  fill: #222222;
+}
+.menu__nav-link {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.menu__nav-link:hover path {
+  fill: #F16D7F;
 }
 .menu__title {
   font-size: 14px;
@@ -650,6 +673,13 @@ summary::-webkit-details-marker {
   }
   .nav__burger-menu {
     top: 55px;
+  }
+  .nav .menu__nav {
+    visibility: visible;
+    transition: all 0.3s;
+  }
+  .nav .menu__nav-link {
+    opacity: 1;
   }
   .nav__link {
     display: none;

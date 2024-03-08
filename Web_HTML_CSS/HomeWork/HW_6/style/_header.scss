@@ -125,6 +125,33 @@ summary::-webkit-details-marker {
   background-color: #ffffff;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
+
+  &__nav {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    & svg {
+      width: 25px;
+    }
+
+    & path {
+      fill: #222222;
+    }
+
+    &-link {
+      opacity: 0;
+      transition: all 0.3s;
+      &:hover path {
+        fill: $colorText;
+      }
+    }
+  }
   &__title {
     font-size: 14px;
     font-weight: 700;

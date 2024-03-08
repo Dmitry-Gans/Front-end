@@ -124,6 +124,16 @@
     &__burger-menu {
       top: 55px;
     }
+
+    .menu__nav {
+      visibility: visible;
+      transition: all 0.3s;
+
+      &-link {
+       opacity: 1;
+      }
+    }
+
     &__link {
       display: none;
     }
