@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: Lato;
+  background: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+//   body,
+//   html {
+//     overflow-x: hidden;
+//   }
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a,
+summary,
+label,
+input,
+button {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a {
+  color: #222222;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.center {
+  @include centerSize($sizeWidth);
+}
+
+.header {
+  height: 100px;
+  border: 1px solid #ececec;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+}
