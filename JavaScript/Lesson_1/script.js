@@ -94,20 +94,70 @@
 // Задание 6:
 // 1. Создайте строку с вашем именем и строку с вашей фамилией. Выведите эти данные в консоль.
 
-const firstName = 'Dmitry';
-const lastName = 'Guslov';
-console.log(`Имя и фамилия ${firstName} ${lastName}`);
+// const firstName = 'Dmitry';
+// const lastName = 'Guslov';
+// console.log(`Имя и фамилия ${firstName} ${lastName}`);
 
 // 2. Создайте переменную с текстом 'java' и переменную с текстом 'script'. С помощью этих переменных и операции конкатенации строк выведите в консоль строку 'javascript'.
 
-const java = 'java';
-const script = 'Script'
-console.log(`Результат ${java + script}`);
+// const java = 'java';
+// const script = 'Script'
+// console.log(`Результат ${java + script}`);
 
 // 3. Создайте переменную с текстом 'hello' и переменную с текстом 'world'. С помощью этих переменных и операции конкатенации строк выведите в консоль строку 'hello world', желательно использовать бэктики (обратные кавычки).
 // Тайминг: 15 минут.
 
-const hello = 'hello';
-const world = 'world'
-console.log(`Результат ${hello} ${world}!`.toLowerCase());
-console.log(`Результат ${hello} ${world}!`.toUpperCase());
+// const hello = 'hello';
+// const world = 'world'
+// console.log(`Результат ${hello} ${world}!`.toLowerCase());
+// console.log(`Результат ${hello} ${world}!`.toUpperCase());
+
+
+// Задача добавить каждому животному новую строку:
+
+// let animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+// for (let i = 0; i < animals.length; i++) {
+//     animals[i] = animals[i] + " - прекрасное животное";
+//     console.log(animals[i]);
+// }
+// console.log(animals);
+
+
+// Задача сгенерировать случайную строку
+
+// let alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".toLowerCase();
+// let randomString = '';
+// while (randomString.length < 6) {
+//     let indexAlphabet = Math.floor(Math.random() * alphabet.length)
+//     randomString += alphabet[indexAlphabet]
+// }
+
+// console.log(randomString);
+
+
+// Задача превратить текст в зашифрованный
+
+let input = 'javascript is awesome';
+let output = '';
+
+console.log(input);
+
+for (let i = 0; i < input.length; i++) {
+    if (input[i]=='e') {
+        output += '3';
+    }
+    else if (input[i] == 'i') {
+        output += '1';
+    }
+    else if (input[i] == 'o') {
+        output += '0';
+    }
+    else if (input[i] == 'a') {
+        output += '4';
+    }
+    else {
+        output += input[i];
+    }
+}
+
+console.log(output);
