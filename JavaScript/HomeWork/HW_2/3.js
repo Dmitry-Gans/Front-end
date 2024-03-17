@@ -16,10 +16,7 @@
 
 const dayNumber = Number(prompt("Выберете любое число месяца"));
 let interval = '';
-if (isNaN(dayNumber)) {
-    console.log("Вы ввели не число, а строку...");
-}
-else {
+if (Number.isInteger(dayNumber)) {
     if (dayNumber <= 10 && dayNumber > 0) {
         interval = 1;
         console.log(`Число ${dayNumber} попадает в ${interval} декаду месяца.`);
@@ -32,4 +29,6 @@ else {
     } else {
         console.log("Вы ввели число за пределами диапазона");
     }
+}else {
+    console.log("Вы ввели не целое число...");
 }

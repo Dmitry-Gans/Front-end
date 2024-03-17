@@ -25,6 +25,6 @@
 
 const number = Number(prompt("Введите любое трехзначное число, чем больше тем интереснее ;)"));
 const units = number % 10;
-const dozen = (Math.trunc(number / 10) % 10);
-const hundred = (Math.trunc(number / 100) % 10);
+const dozen = Math.trunc(number / 10) % 10;
+const hundred = Math.trunc(number / 100) % 10;
 console.log(`В числе ${number} количество сотен: ${hundred}, десятков: ${dozen}, единиц: ${units}`);
