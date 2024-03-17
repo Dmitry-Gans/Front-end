@@ -83,3 +83,59 @@
     }
   }
 }
+
+.menu__list3 {
+  &:hover .mega-menu {
+    left: -76px;
+  }
+
+  &:hover .mega-menu::before {
+    left: 120px;
+  }
+}
+
+.menu__list4 {
+  &:hover .mega-menu {
+    left: -182px;
+  }
+
+  &:hover .mega-menu::before {
+    left: 213px;
+  }
+}
+
+.menu__list5 {
+  &:hover .mega-menu {
+    right: -121px;
+    left: auto;
+  }
+
+  &:hover .mega-menu::before {
+    right: 190px;
+    left: auto;
+  }
+}
+
+.menu__list6 {
+  &:hover .mega-menu {
+    right: 0;
+    left: auto;
+  }
+
+  &:hover .mega-menu::before {
+    right: 60px;
+    left: auto;
+  }
+}
+
+.menu__list7 {
+  &:hover .mega-menu {
+    right: 0;
+    left: auto;
+  }
+
+  &:hover .mega-menu::before {
+    right: 60px;
+    left: auto;
+  }
+}
