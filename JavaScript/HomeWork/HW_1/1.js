@@ -16,7 +16,5 @@
 // Здесь пишем решение, данный комментарий необходимо стереть.
 
 const celsius = Number(prompt("Введите температуру в градусах Цельсия"));
-const fahrenheit = (9 / 5) * celsius + 32;
-alert(isNaN(celsius) ? 'Вы ввели не число' : `Цельсий: ${celsius}, Фаренгейт: ${fahrenheit}` );
-
-
+const fahrenheit = Math.round((9 / 5) * celsius + 32);
+alert(Number.isNaN(celsius) ? 'Вы ввели не число' : `Цельсий: ${celsius}, Фаренгейт: ${fahrenheit}` );
