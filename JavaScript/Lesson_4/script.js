@@ -67,13 +67,13 @@
 // 2. С помощью цикла for выведите в консоль нечетные числа в промежутке от 1
 // до 100 включительно.
 
-// for (let i = 1; i <= 100; i++) {
+// for (let i = 1; i <= 100; i += 2) {
 //   console.log(i);
 // }
 
 // // Второй вариант:
 
-// for (let i = 1; i <= 100; i += 2) {
+// for (let i = 1; i <= 100; i++) {
 //   if (i % 2 !== 0) {
 //     console.log(i);
 //   }
@@ -90,13 +90,17 @@
 // Посчитайте количество итераций, необходимых для этого.
 
 // let num = 2;
-// for (let i = 2; i <= 1000; i++) {
-//   console.log(`Итерация ${i} Результат: ${(num = num * 3)}`);
+// for (let i = 1; i <= 1000; i++) {
+//   if (num < 1000) {
+//     console.log(`Итерация ${i} Результат: ${num *= 3}`);
+//   }
 // }
-// let num = 2;
+
+// Вариант через while
+
+// let count = 0;
 // while (num < 1000) {
-//   num = num * 3;
-//   count++;
+//   console.log(`Итерация ${count++} Результат: ${num *= 3}`);
 // }
 
 // Задание 4:
@@ -105,34 +109,40 @@
 // Выведите в консоль те элементы массива, которые больше 3-х, но меньше 10.
 
 // const arr = [2, 5, 9, 15, 1, 4];
-// // for (let i = 0; i < arr.length; i++) {
-// //   if (arr[i] > 3 && arr[i] < 10) {
-// //     console.log(arr[i]);
-// //   }
-// // }
-// // Второй вариант через foreach:
-// // arr.forEach(function (num) {
-// //   if (num > 3 && num < 10) {
-// //     console.log(num);
-// //   }
-// // });
 
-// // const filterArr = arr.filter(function (num) {
-// //   if (num > 3 && num < 10) {
-// //     return true;
-// //   }
-// //   return false;
-// // });
-// // console.log(filterArr);
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > 3 && arr[i] < 10) {
+//     console.log(arr[i]);
+//   }
+// }
 
-// // Короткий вариант через стрелочную функцию
+// Второй вариант через foreach:
+
+// arr.forEach(function (num) {
+//   if (num > 3 && num < 10) {
+//     console.log(num);
+//   }
+// });
+
+// Вариант через filter: Создается полностью новый массив
+
+// const filterArr = arr.filter(function (num) {
+//   if (num > 3 && num < 10) {
+//     return true;
+//   }
+//   return false;
+// });
+// console.log(filterArr);
+
+// Короткий вариант через стрелочную функцию
 
 // const filterArr = arr.filter((num) => num > 3 && num < 10);
+// console.log(filterArr);
 
 // 2. Найдите сумму четных чисел от 2 до 100.
 
 // let sum = 0;
-// for (let i = 2; i < 100; i = i + 2) {
+// for (let i = 2; i < 100; i += 2) {
 //     sum += i;
 // }
 // console.log(sum);
@@ -202,6 +212,6 @@
 // 4. Дан массив: `[1, 2, 3, 4, 5]`.
 // С помощью метода splice преобразуйте массив в следующий: [1, 4, 5]
 
-const arr = [1, 2, 3, 4, 5];
-arr.splice(1, 2);
-console.log(arr);
+// const arr = [1, 2, 3, 4, 5];
+// arr.splice(1, 2);
+// console.log(arr);
