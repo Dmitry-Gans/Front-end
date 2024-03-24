@@ -11,11 +11,11 @@
 
 const num = Number(prompt("Введите число:"));
 
-if (Number.isNaN(num)) {
+if (!Number.isFinite(num)) {// - проверяем что значение num число и что оно не Infinity и не NaN, в общем, что это корректное число.
   console.log("Значение задано неверно");
 } else {
   const salary = (num) => {
-    const result = num - Math.trunc(num * 0.13);
+    const result = Math.round((num - (num * 0.13)) *100)/100;//Округляем до 2 знаков после запятой
     return `Размер заработной платы за вычетом налогов равен ${result}.`;
   };
   console.log(salary(num));
