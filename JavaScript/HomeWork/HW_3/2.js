@@ -14,6 +14,9 @@ const num = Number(prompt("Введите число:"));
 if (Number.isNaN(num)) {
   console.log("Значение задано неверно");
 } else {
-  const salary = (num) => num - Math.trunc(num * 0.13);
+  const salary = (num) => {
+    const result = num - Math.trunc(num * 0.13);
+    return `Размер заработной платы за вычетом налогов равен ${result}.`;
+  };
   console.log(salary(num));
 }
