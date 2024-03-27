@@ -12,6 +12,7 @@ xxxx
 xxxxx
 */
 
-for (let i = 0; i <= 20; i++) {
-    console.log("X".repeat(i));
+for (let i = 1; i <= 20; i++) {
+  //Первая строка будет пустой, если начинать с 0, лучше начинать i с 1.
+  console.log("X".repeat(i));
 }

@@ -23,12 +23,12 @@ for (let i = 0; i < 5; i++) {
   arr.push(Math.trunc(Math.random() * 10));
 }
 
+minVal = arr[0];
+
 arr.forEach(function (val, i) {
   if (val === 3) {
     index.push(i);
   }
-
-  minVal = arr[0];
 
   if (minVal > val) {
     minVal = val;
