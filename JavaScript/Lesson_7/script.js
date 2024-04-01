@@ -1,15 +1,12 @@
-// Задание 1 (тайминг 25 минут)
+// Задание 1 (время 25 минут)
 // <div class="block">
 // </div>
-// 1 Дан блок, внутри него необходимо создать
-// элемент div с классом item, разместить текст
-// “Элемент внутри” и задать стили
+// 1. Дан блок, внутри него необходимо создать элемент div с классом item, разместить текст “Элемент внутри” и задать стили:
 // ● Цвет текста синий
 // ● Рамка сплошная черная
 // ● Цвет фона #f8f8f8
 // ● Внутренний отступ 16px
-// 1 Добавить данному блоку класс item_1
-// (использовать setAttribute)
+// ● Добавить данному блоку класс item_1  (использовать setAttribute)
 
 // const parentDivEl = document.querySelector('div.block');
 // const divEl = document.createElement('div');
@@ -21,7 +18,7 @@
 // Или через add.classList:
 // divEl.classList.add('item_1');
 
-// Задание 2 (тайминг 25 минут)
+// Задание 2 (время 25 минут)
 // 1 Дан код
 // <div class="elem">
 // <img src="photo.png" alt="photo">
@@ -45,7 +42,7 @@
 // console.log(textEl.parentElement.previousElementSibling);
 // console.log(textEl.parentElement.parentElement);
 
-// Задание 3 (тайминг 20 минут)
+// Задание 3 (время 20 минут)
 // <div class="item">
 // <div class="elem">
 // <div class="info">
@@ -74,25 +71,21 @@
 
 // findParents(h2El);
 
-// Задание 4 (тайминг 25 минут)
+// Задание 4 (время 25 минут)
 // <form action="#">
 // <input type="text">
 // <button class="btn">Отправить</button>
 // </form>
-// 1 Дано поле ввода и кнопка отправить, необходим
-// реализовать функционал, если пользователь нажимает на
-// кнопку отправить, а поле ввода пустое, то под полем ввода
-// и кнопкой должен появиться заголовок h2 с текстом вы не
-// заполнили поле ввода
-// 2 Цвет у рамки сделать красным
+// 1. Дано поле ввода и кнопка отправить, необходимо реализовать функционал, если пользователь нажимает на кнопку отправить, а поле ввода пустое, то под полем ввода и кнопкой должен появиться заголовок h2 с текстом вы не заполнили поле ввода
+//  2. Цвет у рамки сделать красным
 
 const btnEl = document.querySelector('form button.btn');
-const inputEl = document.querySelector('form input[type="text"]');
+const inputEl = document.querySelector('form input[type="text"]');//В [значение]
 
 btnEl.onClick = function (event) {
     if(!inputEl.value && !document.querySelector('form h2')) {
         const h2El = document.createElement('h2');
-        h2El.innerHTML = 'вы не заполнили поле ввода';
+        h2El.innerHTML = 'Вы не заполнили поле ввода...';
         btnEl.parentElement.appendChild(h2El);
         inputEl.style.border = '1px solid red';
     }
