@@ -31,14 +31,9 @@ const products = [
   },
 ];
 
-products.filter((item) => {
-  if ("photos" in item && item.photos.length > 0) {
-    console.log(item);
-  }
-});
-
-console.log(
-  products.sort(function (a, b) {
-    return a.price - b.price;
-  })
+const filterArr = products.filter(
+  (item) => "photos" in item && item.photos.length > 0
 );
+console.log(filterArr);
+
+console.log(products.sort((a, b) => a.price - b.price));
