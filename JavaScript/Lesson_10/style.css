@@ -1,0 +1,10 @@
+.container {
+
+}
+
+.img__container {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    border: 5px solid red;
+}
