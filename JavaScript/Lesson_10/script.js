@@ -51,7 +51,7 @@ fetch("https://api.nbrb.by/exrates/rates?periodicity=0")
             const textData = document.createElement('p');
             textData.innerHTML = element.Date;
             newDivEl.appendChild(textData);
-            
+
             const textCurAbb = document.createElement('p');
             textCurAbb.innerHTML = element.Cur_Abbreviation;
             newDivEl.appendChild(textCurAbb);
