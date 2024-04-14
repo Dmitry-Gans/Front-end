@@ -1,0 +1,11 @@
+.message {
+    visibility: hidden;
+}
+
+.animate_fadeInLeftBig{
+    visibility: visible;
+}
+
+.error {
+    border: 3px solid red;
+}
