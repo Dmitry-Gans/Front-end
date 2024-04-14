@@ -25,7 +25,7 @@ parseResult.forEach(e => {
     authorEl.classList.add('author');
     authorEl.innerHTML = "Автор: " + e.author;
     itemEl.appendChild(authorEl);
-    
+
     const quoteEl = document.createElement('h2');
     quoteEl.classList.add('quote');
     quoteEl.innerHTML = "Цитата: " + e.quote;
