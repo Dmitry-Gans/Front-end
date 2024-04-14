@@ -46,6 +46,7 @@ fetch("https://api.nbrb.by/exrates/rates?periodicity=0")
             // console.log(element);
             const newDivEl = document.createElement('div');
             newDivEl.classList.add('img__container');
+            divContEl.appendChild(newDivEl);
 
             const textData = document.createElement('p');
             textData.innerHTML = element.Date;
@@ -66,8 +67,5 @@ fetch("https://api.nbrb.by/exrates/rates?periodicity=0")
             const textOffRate = document.createElement('p');
             textOffRate.innerHTML = element.Cur_OfficialRate;
             newDivEl.appendChild(textOffRate);
-
-            divContEl.appendChild(newDivEl);
-
         });
     });
