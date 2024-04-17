@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./data.js"></script>
+    <script src="./sctipt.js" defer></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="containerCarts"></div>
+
+    <template id="cartTemplate">
+      <div class="cart">
+        <img class="cart__img" src="" alt="" />
+        <div class="cart__content">
+          <div class="cart__title">
+            <span class="cart__name"></span>
+            <span class="cart__category"></span>
+          </div>
+          <div class="cart__wrapper">
+            <div class="cart__price">
+              <span class="cart__priceText">цена:</span>
+              <span class="cart__priceSelect"></span>
+            </div>
+            <div class="cart__color">
+              <span class="cart__colorText">цвет:</span>
+              <span class="cart__colorSelect"></span>
+            </div>
+            <div class="cart__size">
+              <span class="cart__sizeText">размер:</span>
+              <span class="cart__sizeSelect"></span>
+            </div>
+            <div class="cart__quanity">
+              <span class="cart__sizeText">количество:</span>
+              <span class="cart__quantitySelect"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
