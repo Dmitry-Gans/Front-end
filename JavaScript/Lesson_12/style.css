@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerController{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 270px;
+    height: auto;
+}
+
+.play {
+    background-image: url(./player/play-button-svgrepo-com.svg);
+    width: 45px;
+    height: 45px;
+}
+
+.pause {
+    background-image: url(./player/pause-button-svgrepo-com.svg);
+    width: 45px;
+    height: 45px;
+}
