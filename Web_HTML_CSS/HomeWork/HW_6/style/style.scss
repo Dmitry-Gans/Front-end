@@ -8,6 +8,12 @@
 @import 'info-products';
 @import 'products-content';
 @import 'privileges-content';
+@import 'cart-content';
 @import 'subscribe-content';
 @import 'footer';
 @import 'media';
+
+.cartPreview {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}

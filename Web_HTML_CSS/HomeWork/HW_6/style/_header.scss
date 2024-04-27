@@ -41,6 +41,10 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.none {
+  display: none;
+}
+
 .center {
   @include centerSize($sizeWidth);
 }

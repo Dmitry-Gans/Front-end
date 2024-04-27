@@ -8,6 +8,11 @@
   &__box {
     display: flex;
     flex-direction: column;
+
+    &-title {
+      font-size: 30px;
+      padding-bottom: 64px;
+    }
   }
 
   &__selected {

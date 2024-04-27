@@ -42,6 +42,10 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.none {
+  display: none;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
