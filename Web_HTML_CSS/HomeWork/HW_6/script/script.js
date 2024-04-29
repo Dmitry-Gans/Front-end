@@ -69,10 +69,7 @@ divCartEl.addEventListener("click", (e) => {
   // Захватываем всю область после заголовка Корзины
   if (e.target.closest(".cart-content__button")) {
     // Делегируем event только наследнику(Кнопка удалить/закрыть)
-    const deleteItem = e.target
-      .closest(".cart-content__heading")
-      .closest(".cart-content__info")
-      .closest(".cart-content__selected-item"); // При нажатии на кнопку Удалить, ищем по вложенности родительский элемент всей карточки
+    const deleteItem = e.target.closest(".cart-content__selected-item"); // При нажатии на кнопку Удалить, ищем родительский элемент всей карточки
 
     deleteItem.remove(); // Удаляем родительский элемент(Карточку)
 
