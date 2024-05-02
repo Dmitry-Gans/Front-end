@@ -76,7 +76,7 @@ divCartEl.addEventListener("click", (e) => {
     counterValue.innerHTML -= 1; // Убавляем счетчик у верхней иконки у корзины
 
     // Проверка у иконки, если у иконки будет 0, то скрываем всю иконку
-    if (counterValue.innerHTML.includes("0")) {
+    if (counterValue.innerHTML === 0) {
       counterValue.classList.add("none");
     }
   }
