@@ -187,3 +187,35 @@
 // 1234567890. New balance: 1300
 // account1.withdraw(1500); // Вывод: Insufficient funds in account
 // 1234567890
+
+class BankAccount {
+  static bankName = "СБЕР";
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+    console.log(
+      `Внесено ${amount} на счет ${this.accountNumber}. Ваш баланс: ${this.balance}`
+    );
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      console.log(
+        `Сняли ${amount} с счета ${this.accountNumber}. Ваш баланс: ${this.balance}`
+      );
+    } else {
+      console.log("Недостаточно средств на счете");
+    }
+  }
+}
+
+const account1 = new BankAccount("1234567890", 1000);
+console.log(account1);
+account1.deposit(300);
+account1.withdraw(1200);
+account1.withdraw(1200); // Ошибка
