@@ -37,11 +37,11 @@
 // }
 
 // class Order extends Product {
-//    products = [];
 
 //   constructor() {
 //     super();
 //     this.orderNumber = Math.floor(Math.random() * 1000);
+//     this.products = [];
 //   }
 
 //   addProduct(product) {
