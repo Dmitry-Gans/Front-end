@@ -1,7 +1,6 @@
 "use strict";
 
-// Задание №5 (тайминг 10 минут)
-// Основы Node.js
+// Задание:
 // Необходимо написать HTTP сервер и запустить сервер на порту 3000, который в браузере
 // по URL “/” возвращает такую страницу:
 // Подсказки:
@@ -21,23 +20,35 @@ const http = require("http");
 // У метода createServer() в callBack функции передается два параметра:
 // reg(request) - это объект запроса, можно получить заголовки запроса, url и другие данные
 // res(response) - это объект ответа, у него есть методы позволяющие установить заголовки(writeHead()) и завершить ответ(end())
+let counter1 = 0;
+let counter2 = 0;
 const server = http.createServer((req, res) => {
   console.log("Запрос получен");
   if (req.url === "/") {
+    counter1++;
     res.writeHead(200, {
       "Content-Type": "text/html; charset=UTF-8",
     });
-    res.end("<h1>Мой сервер работает!</h1>");
+    res.end(
+      `<h1>Мой сервер работает!</h1>
+      <a href="http://localhost:3000/about">Обо мне</a>
+      <p>${counter1}</p>`
+    );
   } else if (req.url === "/about") {
+    counter2++;
     res.writeHead(200, {
       "Content-Type": "text/html; charset=UTF-8",
     });
-    res.end("<h1>Страница About</h1>");
+    res.end(
+      `<h1>Страница About</h1>
+      <a href="http://localhost:3000/">На главную</a> </a>
+      <p>${counter2}</p>`
+    );
   } else {
     res.writeHead(404, {
       "Content-Type": "text/html; charset=UTF-8",
     });
-    res.end("Page not found");
+    res.end("<h1>Page not found</h1>");
   }
 });
 
