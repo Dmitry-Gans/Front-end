@@ -90,7 +90,7 @@ const url2 = "https://dog.ceo/api/breeds/image/random";
 const getDog = async (url) => {
   try {
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
     return data;
   } catch (error) {
     console.log(error);
@@ -100,7 +100,7 @@ const getDog = async (url) => {
 let count = 0;
 
 async function renderDogs() {
-  const data = await getData(url2);
+  const data = await getDog(url2);
   divEl.insertAdjacentHTML(
     "beforeend",
     `
