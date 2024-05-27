@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "decimal.js": "^10.4.3",
+    "number-precision": "^1.6.0"
+  },
+  "name": "lesson_2",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
