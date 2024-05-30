@@ -48,3 +48,4 @@ obj.city = "Ekaterinburg";
 fs.writeFileSync(pathFile, JSON.stringify(obj, null, 2));
 
 console.log(obj);
+
