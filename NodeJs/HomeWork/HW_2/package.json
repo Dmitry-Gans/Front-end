@@ -1,0 +1,12 @@
+{
+  "name": "random_name_and_date_by_dmitry",
+  "version": "1.0.0",
+  "description": "Это шаблон для генерации рандомного Имени с Фамилией и датой рождения.",
+  "main": "index.js",
+  "scripts": {
+    "start": "run index.js"
+  },
+  "keywords": [],
+  "author": "Dmitry Guslov",
+  "license": "ISC"
+}
