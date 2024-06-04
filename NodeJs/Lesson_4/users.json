@@ -7,29 +7,16 @@
     "city": "Ekaterinburg"
   },
   {
-    "id": 3,
-    "name": "dmitriy",
-    "surname": "karpenko",
-    "age": 25,
-    "city": "Sochi"
-  },
-  {
-    "id": 4,
-    "name": "Roman",
-    "surname": "Petrov",
-    "age": 25
-  },
-  {
-    "id": 3,
-    "name": "dmitriy",
-    "surname": "karpenko",
-    "age": 1,
-    "city": "fdsfsdfs"
-  },
-  {
     "id": 4,
     "name": "dmitriy",
     "surname": "karpenko",
     "age": 1
+  },
+  {
+    "id": 3,
+    "name": "Валерия",
+    "surname": "Тужилкина",
+    "age": 30,
+    "city": "Коломна"
   }
 ]
