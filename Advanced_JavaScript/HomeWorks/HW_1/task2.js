@@ -43,30 +43,27 @@ const dishesAndChefs = new Map([
 const orders = new Map();
 
 // Функция для добавления заказа клиента:
+
 function addOrder(client, dish) {
-  // Проверяем, есть ли клиент в коллекции заказов. Если нет, то создаем пару ключ-значение, где ключ — имя клиента, а значение — массив заказанных блюд:
-  if (orders.has(client)) {
-    // Проверка для последующих блюд, есть ли они в меню:
-    if (dishesAndChefs.has(dish)) {
-      orders.get(client).push(dish);
-    } else {
-      console.error(`${client}, нет такого блюда: ${dish}!`);
-    }
-  } else {
-    // Проверка для первого блюда, есть ли оно в меню:
-    if (dishesAndChefs.has(dish)) {
-      orders.set(client, [dish]);
-    } else {
-      console.error(`${client}, нет такого блюда: ${dish}!`);
-    }
+  // Проверяем есть ли блюдо в меню:
+  if (!dishesAndChefs.has(dish)) {
+    console.error(`${client}, нет такого блюда: ${dish}!`);
+    return;
   }
+  // Проверяем, есть ли клиент в коллекции заказов. Если нет, то создаем пару ключ-значение, где ключ — имя клиента, а значение — массив заказанных блюд:
+  if (!orders.has(client)) {
+    orders.set(client, []);
+  }
+  // Добавляем блюдо в заказ клиента:
+  orders.get(client).push(dish);
 }
 
 // Заказы клиентов:
-addOrder("Алексей", 'Пицца "Пепперони"');
-addOrder("Алексей", "Чизкейк");
+addOrder("Алексей", "sdfsd");
 addOrder("Алексей", 'Пицца "Пепперони"');
 addOrder("Алексей", "sdfsd");
+addOrder("Алексей", "Чизкейк");
+addOrder("Алексей", 'Пицца "Пепперони"');
 
 addOrder("Мария", 'Суши "Калифорния"');
 addOrder("Мария", 'Пицца "Маргарита"');
