@@ -29,7 +29,7 @@
 // Клиент Мария заказала: Суши "Калифорния" и Пиццу "Маргарита".
 // Клиент Ирина заказала: Чизкейк.
 
-// Создаем коллекцию Map для хранения блюд и их поваров
+// Создаем коллекцию Map для хранения блюд и их поваров:
 const dishesAndChefs = new Map([
   ['Пицца "Маргарита"', "Виктор"],
   ['Пицца "Пепперони"', "Виктор"],
@@ -39,18 +39,21 @@ const dishesAndChefs = new Map([
   ["Чизкейк", "Дмитрий"],
 ]);
 
-// Создаем коллекцию Map для хранения заказов каждого клиента
+// Создаем коллекцию Map для хранения заказов каждого клиента:
 const orders = new Map();
 
-// Функция для добавления заказа клиента
+// Функция для добавления заказа клиента:
 function addOrder(client, dish) {
+  // Проверяем, есть ли клиент в коллекции заказов. Если нет, то создаем пару ключ-значение, где ключ — имя клиента, а значение — массив заказанных блюд:
   if (orders.has(client)) {
+    // Проверка для последующих блюд, есть ли они в меню:
     if (dishesAndChefs.has(dish)) {
       orders.get(client).push(dish);
     } else {
       console.error(`${client}, нет такого блюда: ${dish}!`);
     }
   } else {
+    // Проверка для первого блюда, есть ли оно в меню:
     if (dishesAndChefs.has(dish)) {
       orders.set(client, [dish]);
     } else {
@@ -59,7 +62,9 @@ function addOrder(client, dish) {
   }
 }
 
-// Заказы клиентов
+// Заказы клиентов:
+addOrder("Алексей", 'Пицца "Пепперони"');
+addOrder("Алексей", "Чизкейк");
 addOrder("Алексей", 'Пицца "Пепперони"');
 addOrder("Алексей", "sdfsd");
 
@@ -68,70 +73,30 @@ addOrder("Мария", 'Пицца "Маргарита"');
 
 addOrder("Ирина", "Чизкейк");
 
-// Вывод информации о заказах
+// Вывод информации о заказах:
+// Первый аргумент `dishes` — это значение (value) текущей пары ключ-значение, то есть массив заказанных блюд для конкретного клиента.
+// Второй аргумент `client` — это ключ (key) текущей пары ключ-значение, то есть имя клиента
 orders.forEach((dishes, client) => {
   console.log(`${client} заказал(а):`);
+  // Создаем новую коллекцию, чтобы в нее поместить количество заказов для каждого блюда:
+  const dishCount = new Map();
   dishes.forEach((dish) => {
-    console.log(`- ${dish}`);
+    // Получаем текущее количество заказов для данного блюда:
+    let currentCount = dishCount.get(dish);
+    // Если блюда еще нет в коллекции, устанавливаем количество заказов равным 0:
+    if (currentCount === undefined) {
+      currentCount = 0;
+    }
+    currentCount++;
+    // Обновляем коллекцию с новым значением количества заказов для данного блюда:
+    dishCount.set(dish, currentCount);
+
+    // Вариант в одну строчку:
+    // dishCount.set(dish, (dishCount.get(dish) || 0) + 1);
+  });
+  dishCount.forEach((count, dish) => {
+    console.log(`- ${dish}, количество: ${count} шт.`);
     console.log(`  (готовит: ${dishesAndChefs.get(dish)})`);
   });
   console.log("");
 });
-
-// Проба пера:
-// const listOfChefs = new Map();
-// const listOfOrders = new Map();
-
-// const mealVictor = {
-//   chef: "Виктор",
-//   meals: new Set(["Пепперони", "Маргарита"]),
-// };
-// const mealOlga = {
-//   chef: "Ольга",
-//   meals: new Set(["Калифорния", "Анигири"]),
-// };
-// const mealDmitry = {
-//   chef: "Дмитрий",
-//   meals: new Set(["Тирамису", "Чизкейк"]),
-// };
-
-// listOfChefs.set("Пицца", mealVictor);
-// listOfChefs.set("Суши", mealOlga);
-// listOfChefs.set("Десерты", mealDmitry);
-
-// class Order {
-//   constructor(client, type, meal) {
-//     this.client = client;
-//     this.type = type;
-//     this.meal = meal;
-//   }
-//   confirmOrder() {
-//     if (listOfOrders.has(this.client)) {
-//       if (
-//         listOfChefs.has(this.type) &&
-//         listOfChefs.get(this.type).meals.has(this.meal)
-//       ) {
-//         listOfOrders.get(this.client).add(this.meal);
-//       } else {
-//         return "Нет такого блюда";
-//       }
-//     } else {
-//       listOfOrders.set(this.client, new Set([this.meal]));
-//     }
-//     const nameChef = listOfChefs.get(this.type).chef;
-//     const meals = [...listOfOrders.get(this.client)].join(", ");
-//     return `Клиент ${this.client} заказал: ${meals}, его готовит ${nameChef}`;
-//   }
-// }
-
-// const order = new Order("Саша", "Пицца", "Пепперони");
-// const order2 = new Order("Саша", "Десерты", "Чизкейк");
-// const order3 = new Order("Саша", "Суши", "выаыв");
-// const order4 = new Order("Петя", "Суши", "Калифорния");
-
-// console.log(order.confirmOrder());
-// console.log(order2.confirmOrder());
-// console.log(order3.confirmOrder());
-// console.log(order4.confirmOrder());
-
-// console.log(listOfOrders);
