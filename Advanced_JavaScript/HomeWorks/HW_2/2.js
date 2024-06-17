@@ -121,6 +121,16 @@ containerEl.addEventListener("click", (event) => {
       error20.classList.add("none");
       error100.classList.add("none");
 
+      // // Добавляем новый отзыв в массив:
+      // initialData.forEach((element) => {
+      //   if (element.product === title.textContent) {
+      //     element.reviews.push({
+      //       id: uid(),
+      //       text: inputValue,
+      //     });
+      //   }
+      // });
+
       // Переменная для разметки отзыва:
       const newReviewHTML = `<p class="product__review">${inputValue}</p>`;
       // Добавляем новый отзыв на страницу:
