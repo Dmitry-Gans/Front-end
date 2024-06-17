@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.none {
+  display: none;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+.product {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  width: 270px;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.product__listError {
+  position: relative;
+  height: 0;
+}
+
+.product__error20,
+.product__error100 {
+  font-size: 14px;
+  color: red;
+  position: absolute;
+  top: 4px;
+}
+
+.product__input {
+  width: 180px;
+}
+
+.product__listReviews {
+  border-top: 1px solid rgb(199, 192, 192);
+  overflow-wrap: break-word;
+}
