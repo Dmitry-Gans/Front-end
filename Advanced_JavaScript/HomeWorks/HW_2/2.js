@@ -83,11 +83,10 @@ initialData.forEach((element) => {
     </p>
   </div>
   <form class="product__form">
-    <input
+    <textarea
       class="product__input"
-      type="text"
       placeholder="Оставьте свой комментарий"
-    />
+    ></textarea>
     <button class="product__button" type="submit">Отправить</button>
   </form>
   <div class="product__listReviews">${reviewsHTML}</div>
@@ -116,6 +115,7 @@ containerEl.addEventListener("click", (event) => {
     if (inputValue.length < 20) {
       error20.classList.remove("none");
     } else if (inputValue.length > 100) {
+      error20.classList.add("none");
       error100.classList.remove("none");
     } else {
       error20.classList.add("none");
