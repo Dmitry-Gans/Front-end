@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="./addReview.js" defer></script>
+	</head>
+	<body>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: sans-serif;
+			}
+			.container {
+				display: flex;
+				justify-content: space-around;
+				background-color: rgb(240, 240, 240);
+			}
+
+			.form-review {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				width: 250px;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+		</style>
+		<div class="container">
+			<form class="form-review">
+				<input
+					class="product-name"
+					type="text"
+					placeholder="Введите название продукта"
+				/>
+				<textarea
+					class="review-text"
+					placeholder="Введите свой отзыв"
+				></textarea>
+				<button class="button-review">Добавить отзыв</button>
+			</form>
+		</div>
+	</body>
+</html>
