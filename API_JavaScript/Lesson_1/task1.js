@@ -8,12 +8,13 @@
 const widthBom = window.innerWidth
 const heightBom = window.innerHeight
 
-const resaultEl = document.querySelector('.widht-height')
-resaultEl.innerHTML = `ширина:${widthBom} высота:${heightBom}`
+const resultEl = document.querySelector('.width-height')
+resultEl.innerHTML = `ширина:${widthBom} высота:${heightBom}`
 
 window.addEventListener('resize', () => {
-	resaultEl.innerHTML = `ширина:${window.innerWidth} высота:${window.innerHeight}`
+	resultEl.innerHTML = `ширина:${window.innerWidth} высота:${window.innerHeight}`
 })
 
+// document.documentElement - Это само окно браузера.
 console.log(document.documentElement.clientWidth)
 console.log(document.documentElement.clientHeight)

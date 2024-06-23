@@ -15,7 +15,10 @@ const addButtonEl = document.querySelector('#addButton')
 const containerEl = document.querySelector('#container')
 
 addButtonEl.addEventListener('click', () => {
+	// Узнаем количество элементов с классом.box
 	const boxsEl = containerEl.querySelectorAll('.box').length
+	// Добавляем новый элемент с классом.box и текстом,
+	// указывающий порядковый номер элемента (1, 2, 3 и так далее).
 	containerEl.insertAdjacentHTML(
 		'beforeend',
 		`<div class="box">${boxsEl + 1}</div>`
@@ -27,6 +30,8 @@ addButtonEl.addEventListener('click', () => {
 
 const removeButtonEl = document.querySelector('#removeButton')
 removeButtonEl.addEventListener('click', () => {
+	// Есть ли последний элемент в контейнере, если да, то удаляем его.
+	// За такую проверку отвечает оператор "?."
 	containerEl.lastElementChild?.remove()
 })
 
@@ -39,10 +44,14 @@ removeButtonEl.addEventListener('click', () => {
 const cloneButtonEl = document.querySelector('#cloneButton')
 
 cloneButtonEl.addEventListener('click', () => {
+	// Есть ли последний элемент в контейнере, если да, то клонируем его.
 	const cloneEl = containerEl.lastElementChild?.cloneNode(true)
+	// Если есть, то:
 	if (cloneEl) {
+		// Добавляем клонированный элемент на страницу:
 		containerEl.appendChild(cloneEl)
 	} else {
+		// Если нет, то выдает ошибку:
 		alert('!!!')
 	}
 })
