@@ -12,22 +12,47 @@
 				margin: 0;
 				padding: 0;
 			}
+			.none {
+				display: none;
+			}
 
 			.container {
 				display: flex;
+				justify-content: center;
 				gap: 10px;
+				padding-top: 20px;
 			}
 
 			.review {
-        max-width: 350px;
+				width: 300px;
 				padding: 5px;
 				border: 1px solid red;
 			}
 
-      .item-review {
-        display: flex;
-        justify-content: space-between
-      }
+			.showReview {
+				text-align: center;
+				padding: 2px;
+				width: 120px;
+				color: #ffffff;
+				background-color: rgb(2, 236, 166);
+				border-radius: 25px;
+				border: none;
+			}
+
+			.hideReview {
+				text-align: center;
+				padding: 2px;
+				width: 120px;
+				color: #ffffff;
+				background-color: rgb(235, 183, 14);
+				border-radius: 25px;
+				border: none;
+			}
+
+			.item-review {
+				display: flex;
+				justify-content: space-between;
+			}
 		</style>
 		<div class="container"></div>
 	</body>

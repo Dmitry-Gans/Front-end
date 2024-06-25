@@ -22,13 +22,15 @@ containerEl.innerHTML = reviews.map(review => createReviewHtml(review)).join('')
 // Функция создания шаблона html для отзыва:
 function createReviewHtml(review) {
 	return `<div class="review" data-id="${review.id}">
-          <h1 class="product-name">${review.productName}</h1>
-          <button class="showReview">Показать отзыв</button>
-          <button class="hideReview">Скрыть отзыв</button>
-          <div class="item-review">
-          <p class="text">${review.reviewText}</p>
-          <button class="removeReview">Удалить отзыв</button>
-          </div>
-        </div>
-        `
+	  <h1 class="product-name">${review.productName}</h1>
+	  <button class="showReview none">Показать отзыв</button>
+	  <button class="hideReview">Скрыть отзыв</button>
+	  <div class="all-review">
+		  <div class="item-review">
+			  <p class="text">${review.reviewText}</p>
+			  <button class="removeReview">Удалить отзыв</button>
+		  </div>
+	  </div>
+  </div>
+  `
 }

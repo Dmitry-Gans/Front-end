@@ -29,20 +29,22 @@ const reviews = JSON.parse(localStorage.getItem(key))
 document.querySelector('.button-review').addEventListener('click', () => {
 	const productName = document.querySelector('.product-name').value
 	const reviewText = document.querySelector('.review-text').value
+	// Устраиваем проверку на заполненность полей:
 	if (productName === '' || reviewText === '') {
 		alert('Заполните все поля!')
 	} else {
+		// Ищем совпадение по имени продукта в массиве хранилище браузера:
 		const existingReview = reviews.find(
 			review => review.productName === productName
 		)
-
+		// Проверяем, оставляли ли уже отзыв на этот продукт:
 		if (existingReview) {
-			// Добавляем новый отзыв к существующему продукту:
+			// Если да, добавляем новый отзыв к существующему продукту:
 			existingReview.reviewText.push(reviewText)
 			// Обновляем данные в локальном хранилище браузера:
 			localStorage.setItem(key, JSON.stringify(reviews))
 		} else {
-			// Добавляем новый продукт с своими отзывами:
+			// Если нет, добавляем новый продукт с своими отзывами:
 			const newReview = {
 				id: reviews.length + 1,
 				productName,
@@ -53,6 +55,7 @@ document.querySelector('.button-review').addEventListener('click', () => {
 		localStorage.setItem(key, JSON.stringify(reviews))
 		alert('Отзыв успешно добавлен!')
 	}
+  // Очищаем поля формы:
 	document.querySelector('.product-name').value = ''
 	document.querySelector('.review-text').value = ''
 })
