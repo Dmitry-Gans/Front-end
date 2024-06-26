@@ -19,9 +19,12 @@
 const menuEl = document.querySelector('.menu')
 
 menuEl.addEventListener('click', event => {
+	// Проверяем, не является ли кликнутый элемент с классом menu__link:
 	if (!event.target.classList.contains('menu__link')) {
+		// Если нет, заканчиваем выполнение функции:
 		return
 	}
+	// Если кликнутый элемент является ссылкой, то меняем активный пункт, добавляя ему класс и удаляя его у неактивного:
 	menuEl.querySelector('.active').classList.remove('active')
 	event.target.classList.add('active')
 })

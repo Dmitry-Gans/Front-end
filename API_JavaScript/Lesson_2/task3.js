@@ -13,9 +13,13 @@
 const buyButtonEl = document.querySelector('.buy-button')
 
 buyButtonEl.addEventListener('click', event => {
+	// Проверяем, является ли событие доверенным:
 	if (event.isTrusted) {
+		// Меняем текст кнопки:
 		event.target.innerHTML = 'Товар добавлен в корзину'
+		// После делаем кнопку недоступной:
 		event.target.disabled = true
+		// Меняем текст кнопки на "Купить" через 1 секунду:
 		setTimeout(() => {
 			event.target.innerHTML = 'Купить'
 			event.target.disabled = false

@@ -22,20 +22,30 @@ const resultsEl = document.querySelector('.result')
 const resultsListEl = document.querySelector('.result-list')
 
 submitButtonEl.addEventListener('click', function (e) {
+	// Создаем массив, в котором будем хранить ответы пользователя:
 	const answers = []
+	// Перебираем все вопросы и проверяем, выбран ли вариант ответа:
 	questionEls.forEach(questionEl => {
+		// Проверяем, выбран ли вариант ответа у данного вопроса:
 		const answerEl = questionEl.querySelector('input:checked')
+		// Если вариант ответа выбран:
 		if (answerEl) {
+			// Добавляем его значение в массив ответов пользователя:
 			answers.push(answerEl.value)
+			// Убираем красную рамку у вопроса:
 			questionEl.classList.remove('redBorder')
 		} else {
+			// Если вариант ответа не выбран, у данного вопроса добавляем красную рамку:
 			questionEl.classList.add('redBorder')
 		}
 	})
 
+	// Проверяем, ответил ли пользователь на все вопросы:
 	if (questionEls.length === answers.length) {
 		// alert("Пользователь на всё ответил!")
+		// Делаем видимым блок с результатами:
 		resultsEl.style.display = 'block'
+		// Выводим ответы пользователя в блок с результатами, ля этого используем map(), чтобы он перебрал массив ответов пользователя:
 		resultsListEl.innerHTML = answers
 			.map((answer, i) => `<p>Вопрос ${i + 1}: ${answer}</p>`)
 			.join('')

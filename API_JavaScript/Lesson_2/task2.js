@@ -11,23 +11,28 @@
 const openModalButton = document.querySelector('.open-modal-button')
 const modalWindow = document.querySelector('.modal-window')
 
+// Функция для закрытия модального окна:
 const closeModalHandler = event => {
+	// Проверяем, кликнули ли мы внутри модального окна или кнопке закрытия:
 	if (
 		event.target.closest('.modal-window') ||
 		event.target === openModalButton
 	) {
+		// Если да, то не закрываем модальное окно:
 		return
 	}
 
+	// Иначе закрываем модальное окно:
 	modalWindow.style.display = 'none'
 
-	console.log('Событие по window')
+	// После закрытия модального окна удаляем обработчик, чтобы обработчик не срабатывал, если мы не заимодействуем с модальным окном:
 	window.removeEventListener('click', closeModalHandler)
 }
 
 openModalButton.addEventListener('click', event => {
+	// Делаем модальное окно видимым:
 	modalWindow.style.display = 'block'
-	console.log('Событие block')
 
+	// После открытия модального окна добавляем еще один обработчик, на закрытие модального окна:
 	window.addEventListener('click', closeModalHandler)
 })
