@@ -13,7 +13,7 @@ const dataReviews = `[
   {
     "id": 1,
     "productName": "Телевизор",
-    "reviewText": {1:"Отличный телевизор"}
+    "reviewText": ["Отличный телевизор"]
   }
 ]`
 
@@ -55,7 +55,7 @@ document.querySelector('.button-review').addEventListener('click', () => {
 		localStorage.setItem(key, JSON.stringify(reviews))
 		alert('Отзыв успешно добавлен!')
 	}
-	// Очищаем поля формы:
+  // Очищаем поля формы:
 	document.querySelector('.product-name').value = ''
 	document.querySelector('.review-text').value = ''
 })
