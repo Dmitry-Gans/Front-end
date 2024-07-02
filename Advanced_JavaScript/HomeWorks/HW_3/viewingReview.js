@@ -16,6 +16,7 @@ const reviews = JSON.parse(localStorage.getItem(key))
 
 const containerEl = document.querySelector('.container')
 
+console.log(reviews)
 // Выводим список всех продуктов, на которые были оставлены отзывы:
 containerEl.innerHTML = reviews
 	.map(review => createProductHtml(review))
@@ -24,12 +25,13 @@ containerEl.innerHTML = reviews
 // Функция создания шаблона html для товара:
 function createProductHtml(review) {
 	// Переменная для перебора каждого отзыва
-	const reviewItems = review.reviewText
-		.map(item => {
-			return `<div class="item-review">
-              <p class="text">${item}</p>
-              <button class="removeReview">Удалить отзыв</button>
-            </div>`
+	// C помощью Object.entries() - преобразуем объект в массив пар ключ-значение и чтобы к нему применить метод map():
+	const reviewItems = Object.entries(review.reviewText)
+		.map(([reviewId, reviewItem]) => {
+			return `<div class="item-review" data-review-id="${reviewId}">
+                <p class="text">${reviewItem}</p>
+                <button class="removeReview">Удалить отзыв</button>
+              </div>`
 		})
 		.join('')
 
@@ -66,18 +68,34 @@ containerEl.addEventListener('click', el => {
 	}
 })
 
-// Обработчик события для удаления отзыва:
+// Проверка, открыто ли окно с отзывами:
 if (containerEl.querySelector('.all-review')) {
-	containerEl.addEventListener('click', (el) => {
+	// Обработчик события для удаления отзыва:
+	containerEl.addEventListener('click', el => {
 		if (el.target.classList.contains('removeReview')) {
+			const removeEl = el.target.closest('.removeReview')
 			const productEl = el.target.closest('.review')
-			// Получаем id продукта
-			const productId = productEl.dataset.id
-			const productIndex = reviews.findIndex(review => review.id === productId)
-			reviews.splice(productIndex, 1)
-			localStorage.setItem(key, JSON.stringify(reviews))
-			productEl.remove()
+			const productId = +productEl.getAttribute('data-id')
+			const reviewEl = removeEl.closest('.item-review')
+			const reviewId = +reviewEl.getAttribute('data-review-id')
+			// Перебираем массив:
+			reviews.forEach(product => {
+				// Если id продукта совпадает с id удаляемого продукта:
+				if (product.id === productId) {
+					// Удаляем по id нужный нам отзыва:
+					delete product.reviewText[reviewId]
+					// Обновляем данные в локальном хранилище браузера:
+					localStorage.setItem(key, JSON.stringify(reviews))
+					// Удаляем отзыв со страницы
+					reviewEl.remove()
+				}
+			})
+
+			// Если удалены все отзывы продукта, то продукт вовсе должен быть удален со страницы, поэтому переменную allReviewEl объявляем в конце, если ее объявить выше, то длинна будет не 0:
+			const allReviewEl = productEl.querySelectorAll('.item-review')
+			if (allReviewEl.length === 0) {
+				productEl.remove()
+			}
 		}
 	})
 }
-

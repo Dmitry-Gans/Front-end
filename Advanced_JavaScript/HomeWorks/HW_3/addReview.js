@@ -13,7 +13,9 @@ const dataReviews = `[
   {
     "id": 1,
     "productName": "Телевизор",
-    "reviewText": ["Отличный телевизор"]
+    "reviewText": {
+      "1": ["Отличный телевизор"]
+    }
   }
 ]`
 
@@ -22,13 +24,13 @@ if (!localStorage.getItem(key)) {
 	localStorage.setItem(key, dataReviews)
 }
 
-// Получаем данные из локального хранилища браузера, будем использовать их,
-// чтобы не трогать исходные данные:
+// Получаем данные из локального хранилища браузера и преобразуем их в объект JavaScript:
 const reviews = JSON.parse(localStorage.getItem(key))
 
 document.querySelector('.button-review').addEventListener('click', () => {
 	const productName = document.querySelector('.product-name').value
 	const reviewText = document.querySelector('.review-text').value
+
 	// Устраиваем проверку на заполненность полей:
 	if (productName === '' || reviewText === '') {
 		alert('Заполните все поля!')
@@ -37,25 +39,32 @@ document.querySelector('.button-review').addEventListener('click', () => {
 		const existingReview = reviews.find(
 			review => review.productName === productName
 		)
+
 		// Проверяем, оставляли ли уже отзыв на этот продукт:
 		if (existingReview) {
 			// Если да, добавляем новый отзыв к существующему продукту:
-			existingReview.reviewText.push(reviewText)
+			const reviewId = Object.keys(existingReview.reviewText).length + 1
+			existingReview.reviewText[reviewId] = [reviewText]
+
 			// Обновляем данные в локальном хранилище браузера:
 			localStorage.setItem(key, JSON.stringify(reviews))
 		} else {
-			// Если нет, добавляем новый продукт с своими отзывами:
+			// Если нет, добавляем новый продукт с новыми отзывами:
 			const newReview = {
 				id: reviews.length + 1,
 				productName,
-				reviewText: [reviewText],
+				reviewText: {
+					1: [reviewText],
+				},
 			}
 			reviews.push(newReview)
 		}
+
 		localStorage.setItem(key, JSON.stringify(reviews))
 		alert('Отзыв успешно добавлен!')
 	}
-  // Очищаем поля формы:
+
+	// Очищаем поля формы:
 	document.querySelector('.product-name').value = ''
 	document.querySelector('.review-text').value = ''
 })
