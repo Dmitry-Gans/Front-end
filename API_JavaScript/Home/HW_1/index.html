@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="./script.js" defer></script>
+		<style>
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+			th,
+			td {
+				padding: 8px;
+				text-align: left;
+				border-bottom: 1px solid #ddd;
+			}
+
+			th {
+				background-color: #f2f2f2;
+			}
+
+			.buttonAdd,
+			.buttonCancel {
+				padding: 5px 10px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+
+			.buttonCancel {
+				background-color: red;
+			}
+
+			.buttonCancel:disabled,
+			.buttonAdd:disabled {
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Занятия</th>
+					<th>Время</th>
+					<th>Максимальная группа</th>
+					<th>Количество участников</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Заполняем данными из JSON -->
+			</tbody>
+		</table>
+	</body>
+</html>
