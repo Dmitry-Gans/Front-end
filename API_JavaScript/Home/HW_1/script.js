@@ -90,17 +90,34 @@ function createTrainingHtml(training) {
 					<td class="maxParticipants">${training.maxParticipants}</td>
 					<td class="currentParticipants">${training.currentParticipants}</td>
 					<td><button class="buttonAdd">Записаться</button></td>
-					<td><button class="buttonCancel" disabled>Отмена</button></td>
+					<td><button class="buttonCancel">Отмена</button></td>
 				</tr>`
 }
 
 // Добавляем обработчик на нажатие кнопок "Записаться"/"Отмена"
 tbodyEl.addEventListener('click', el => {
 	// Если нажали на кнопку "Записаться":
+	recordingTraining(el)
+
+	// Если нажали на кнопку "Отмена":
+	cancelRecording(el)
+})
+
+// // Функция для отключения кнопок:
+// function disabledButton(training) {
+// 	if (training.currentParticipants > training.maxParticipants) {
+// 		return `<td><button class="buttonAdd" disabled>Записаться</button></td>`
+// 	} else if (training.currentParticipants === 0) {
+// 		return `<td><button class="buttonCancel">Отмена</button></td>`
+// 	}
+// 	return `<td><button class="buttonAdd">Записаться</button></td>
+// 					<td><button class="buttonCancel">Отмена</button></td>`
+// }
+
+// Функция для записи на тренировку:
+function recordingTraining(el) {
 	if (el.target.classList.contains('buttonAdd')) {
 		const trainingEl = el.target.closest('.training')
-		const targetCurrent =
-			trainings[trainingEl.dataset.id - 1].currentParticipants + 1
 		const currentEl = trainingEl.querySelector('.currentParticipants')
 		const maxEl = trainingEl.querySelector('.maxParticipants')
 		const buttonAddEl = trainingEl.querySelector('.buttonAdd')
@@ -123,37 +140,31 @@ tbodyEl.addEventListener('click', el => {
 
 			// Сохраняем изменения в локальное хранилище браузера:
 			localStorage.setItem(key, JSON.stringify(trainings))
-
-			// Если достигнуто максимальное количество нажатий, для одного клиента:
-			if (Number(currentEl.innerHTML) === targetCurrent) {
-				// Выключаем доступ к кнопке:
-				buttonAddEl.disabled = true
-			}
 		} else {
 			// Если достигнуто максимальное количество человек, выключаем доступ к кнопке:
 			buttonAddEl.disabled = true
 		}
 	}
+}
 
-	// Если нажали на кнопку "Отмена":
+// функция для отмены записи:
+function cancelRecording(el) {
 	if (el.target.classList.contains('buttonCancel')) {
 		const trainingEl = el.target.closest('.training')
-		const targetCurrent =
-			trainings[trainingEl.dataset.id - 1].currentParticipants
 		const currentEl = trainingEl.querySelector('.currentParticipants')
 		const buttonAddEl = trainingEl.querySelector('.buttonAdd')
 		const buttonCancelEl = trainingEl.querySelector('.buttonCancel')
-
-		// Если клиент уже нажал 1 раз кнопку "Отмена":
-		if (Number(currentEl.innerHTML) === targetCurrent) {
-			// Выключаем доступ к кнопке:
-			buttonCancelEl.disabled = true
-		}
 
 		// Включаем доступ к кнопке "Записаться":
 		buttonAddEl.disabled = false
 		const count = Number(currentEl.innerHTML) - 1
 		currentEl.innerHTML = count
+
+		// Если текущих клиентов нет:
+		if (Number(currentEl.innerHTML) === 0) {
+			// Выключаем доступ к кнопке:
+			buttonCancelEl.disabled = true
+		}
 
 		trainings.forEach(element => {
 			if (element.id === Number(trainingEl.dataset.id)) {
@@ -162,4 +173,4 @@ tbodyEl.addEventListener('click', el => {
 		})
 		localStorage.setItem(key, JSON.stringify(trainings))
 	}
-})
+}
