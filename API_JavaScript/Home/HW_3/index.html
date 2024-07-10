@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="./script.js" defer></script>
+		<style>
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 1200px;
+				height: auto;
+				margin: 0 auto;
+				padding: 20px;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			.card {
+				max-width: 350px;
+				border: 1px solid #ccc;
+				padding: 20px;
+				margin-bottom: 20px;
+			}
+
+			.img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.history-container {
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: center;
+				gap: 10px;
+				padding-top: 20px;
+			}
+
+			.none {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<div class="img-container">
+					<img class="img" src="" alt="Image" />
+				</div>
+				<h2 class="nameAuthor">Лара Крофт</h2>
+				<div class="like-container">
+					<button class="like-btn">❤</button>
+					<span class="likes">0</span>
+				</div>
+			</div>
+			<button class="btn-history">Показать историю просмотров</button>
+			<div class="history-container none">
+				<!-- Данные из Json -->
+			</div>
+		</div>
+	</body>
+</html>
