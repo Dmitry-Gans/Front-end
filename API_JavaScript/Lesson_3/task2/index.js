@@ -38,72 +38,92 @@
 // Access Key
 // teI77ybP41b2nJcQY-mOmE8nEH0sFeXnWJQTxdgpZcA
 
-let counter = 2;
-let isFetching = false;
+let counter = 2
+// Флаг для проверки, выполняется запрос или нет:
+let isFetching = false
+const photoContainerEl = document.querySelector('#photos-container')
+
 // Secret key
 // wKUQV2wZFilKkHnRh-7vDuLq_TbXQS6WcUho80C5rZw
-document.addEventListener("DOMContentLoaded", Main);
-document.addEventListener("scroll", async function () {
-  // Получаем высоту элемента,
-  // на котором произошло событие
-  //   console.log(document.documentElement.scrollTop);
-  //   console.log(document.documentElement.clientHeight); //высота страницы на текущий момент
-  //   console.log(document.documentElement.scrollHeight);//хз
+document.addEventListener('DOMContentLoaded', Main)
+document.addEventListener('scroll', async function () {
+	// Получаем высоту элемента,
+	// на котором произошло событие
+	//   console.log(document.documentElement.scrollTop);
+	//   console.log(document.documentElement.clientHeight); //высота страницы на текущий момент
+	//   console.log(document.documentElement.scrollHeight);//хз
 
-  //   console.log(`текущая прокрутка ${document.documentElement.scrollTop}`);
-  //   console.log(`точка прокрутки ${document.documentElement.clientHeight - 100}`);
+	//   console.log(`текущая прокрутка ${document.documentElement.scrollTop}`);
+	//   console.log(`точка прокрутки ${document.documentElement.clientHeight - 100}`);
 
-  const page = document.documentElement;
+	// Ссылка на корневой HTML-элемент документа:
+	const page = document.documentElement
 
-  if (
-    page.scrollTop + page.clientHeight >= page.scrollHeight - 100 &&
-    !isFetching
-  ) {
-    counter++;
-    const data = await fetchPhotoList(counter);
-    let imgsHTML = "";
-    data.forEach((element) => {
-      imgsHTML += createImg(element);
-    });
-    photoContainerEl.insertAdjacentHTML("beforeend", imgsHTML);
-  }
-});
+	//  Проверяем, достиг ли пользователь конца страницы и не выполняется ли в данный момент запрос к API Unsplash:
+	if (
+		page.scrollTop + page.clientHeight >= page.scrollHeight - 100 &&
+		!isFetching
+	) {
+		counter++
+		await Main()
+	}
+})
 
-const photoContainerEl = document.querySelector("#photos-container");
-
+// Асинхронная функция, которая выполняет запрос к API Unsplash для получения списка фотографий. Затем она обрабатывает ответ и возвращает промис объектов(позже превратим его в полноценный массив) с информацией о фотографиях:
 async function fetchPhotoList(page) {
-  try {
-    isFetching = true;
-    const response = await fetch(
-      `https://api.unsplash.com/photos?page=${page}`,
-      {
-        headers: {
-          Authorization:
-            "Client-ID teI77ybP41b2nJcQY-mOmE8nEH0sFeXnWJQTxdgpZcA",
-        },
-      }
-    );
-    if (!response.ok) {
-      throw new Error(`ошибка ,сервер статус ${response.status}`);
-    }
+	// Открытие блока try, в котором находится код, который может вызвать исключение:
+	try {
+		// Установка флага isFetching в true, чтобы указать, что запрос выполняется:
+		isFetching = true
+		// Вызов функции fetch для отправки HTTP-запроса к API Unsplash. Оператор await ожидает завершения запроса и возвращает ответ. В качестве параметра передаем ссылку и объект включающий в себя конфигурацию:
+		const response = await fetch(
+			`https://api.unsplash.com/photos?page=${page}`,
+			{
+				// Объект конфигурации для запроса, включающий заголовок Authorization с моим ключом API:
+				headers: {
+					Authorization:
+						'Client-ID teI77ybP41b2nJcQY-mOmE8nEH0sFeXnWJQTxdgpZcA',
+				},
+			}
+		)
+		// Проверка статуса ответа. Если статус не 200 (OK), то вызывается исключение:
+		if (!response.ok) {
+			throw new Error(`ошибка ,сервер статус ${response.status}`)
+		}
 
-    return await response.json();
-  } finally {
-    isFetching = false;
-  }
+		// Если ответ успешен, то вызов response.json() для преобразования ответа в JSON и возврат промиса с информацией о фотографиях:
+		return await response.json()
+
+		// Открытие блока finally, в котором находится код, который выполняется в любом случае, независимо от того, было ли вызвано исключение или нет:
+	} finally {
+		// Сброс флага isFetching в false, чтобы указать, что запрос завершен:
+		isFetching = false
+	}
 }
 
+// Асинхронная функция, которая выполняет основную работу:
 async function Main() {
-  const data = await fetchPhotoList(counter);
-  let imgsHTML = "";
-  data.forEach((element) => {
-    imgsHTML += createImg(element);
-  });
-  photoContainerEl.innerHTML = imgsHTML;
+	// Получаем промис по текущему счетчику из функции, дожидаясь его завершения и присваиваем в новую переменную, тем самым промис превратился в обычный массив с данными:
+	const data = await fetchPhotoList(counter)
+	// Перебираем все элементы и отрисовываем их на странице внутри контейнера:
+	photoContainerEl.innerHTML = data.map(element => createImg(element)).join('')
+
+	// Второй вариант, как это сделать вручную:
+
+	// Объявление и инициализация переменной imgsHTML пустой строкой:
+	// let imgsHTML = ''
+	// Перебираем каждый элемент:
+	// data.forEach(element => {
+	// Добавление HTML-разметку, возвращаемую функцией createImg(element), к imgsHTML:
+	// imgsHTML += createImg(element)
+	// })
+	// Отрисовываем все элементы на странице внутри контейнера:
+	// photoContainerEl.innerHTML = imgsHTML
 }
 
+// Функция, которая создает шаблон HTML-разметки для одной фотографии:
 function createImg(objInfo) {
-  return `<div class="photo">
+	return `<div class="photo">
         <img src="${objInfo.urls.regular}" alt="" />
-      </div>`;
+      </div>`
 }
