@@ -1,0 +1,17 @@
+.card {
+  border: solid 1px rgb(105, 13, 13);
+  width: 250px;
+  text-align: center;
+}
+.card__header {
+  display: block;
+  background-color: rgb(170, 170, 170);
+  color: rgb(105, 13, 13);
+  padding: 10px;
+}
+.card__message {
+  display: block;
+  background-color: rgb(105, 13, 13);
+  color: white;
+  padding: 5px;
+}/*# sourceMappingURL=Message.css.map */
