@@ -19,7 +19,7 @@ function CommentsList() {
 		setComments(comments.filter(item => item.id !== comment.id))
 	}
 	return comments.map(item => (
-		<div className='comment' key='{item.id}'>
+		<div className='comment' key={item.id}>
 			<li>{item.text}</li>
 			<button onClick={() => removeComment(item)}>Удалить</button>
 		</div>
