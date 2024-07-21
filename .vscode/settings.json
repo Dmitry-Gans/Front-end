@@ -1,3 +1,4 @@
 {
-	"cSpell.words": ["деструктуризации"]
+	"cSpell.words": ["деструктуризации"],
+	"git.ignoreLimitWarning": true
 }
