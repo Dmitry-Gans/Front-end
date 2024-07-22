@@ -29,8 +29,8 @@ function TodoList() {
 	const [newTask, setNewTask] = useState('')
 
 	const handleAddTask = () => {
+		// Проверяем, что задача не пустая:
 		if (newTask.trim()) {
-			// Проверяем, что задача не пустая
 			setTasks([...tasks, { id: tasks.length + 1, task: newTask }])
 			setNewTask('') // Очищаем поле ввода
 		}
