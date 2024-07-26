@@ -6,6 +6,8 @@ import Profile from './components/Profile'; // Импортируем компо
 import Footer from './components/Footer'; // Импортируем компонент Footer
 import './App.css';
 
+// Альтернативное решение 1 задачи, разбил все на отдельные компоненты!
+
 // Главный компонент приложения
 const App = () => {
 	return (
