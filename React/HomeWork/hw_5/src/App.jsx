@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './App.css';
 import { toggleTheme } from './components/themeSlice';
 import { useDispatch, useSelector } from 'react-redux';
