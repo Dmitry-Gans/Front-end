@@ -1,0 +1,9 @@
+.form_add {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.form_add button {
+	min-width: 150px;
+}
