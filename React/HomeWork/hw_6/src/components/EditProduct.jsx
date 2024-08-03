@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 import { updateProduct } from '../redux/productsSlice';
 import './EditProduct.css';
 
+// Получаем продукт и функцию закрытия модального окна
 const EditProduct = ({ product, onCancel }) => {
-	// Получаем продукт и функцию закрытия модального окна
 	const dispatch = useDispatch(); // Инициализируем dispatch
 	const [name, setName] = useState(product.name); // Состояние для имени продукта
 	const [description, setDescription] = useState(product.description); // Состояние для описания

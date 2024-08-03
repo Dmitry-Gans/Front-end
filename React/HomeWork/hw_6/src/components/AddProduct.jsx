@@ -1,6 +1,6 @@
-import { useState } from 'react'; // Импортируем React и useState
-import { useDispatch } from 'react-redux'; // Импортируем useDispatch для работы с действиями
-import { addProduct } from '../redux/productsSlice'; // Импортируем действие добавления продукта
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../redux/productsSlice';
 import './AddProduct.css';
 
 const AddProduct = () => {
@@ -21,11 +21,12 @@ const AddProduct = () => {
 			price: parseFloat(price), // Приводим цену к числу
 			available,
 		};
-		dispatch(addProduct(newProduct)); // Вызываем действие для добавления продукта
-		setName(''); // Очищаем поле имени
-		setDescription(''); // Очищаем поле описания
-		setPrice(''); // Очищаем поле цены
-		setAvailable(true); // Сбрасываем доступность
+		dispatch(addProduct(newProduct)); // Вызываем действие для добавления продукта в хранилище
+		// Очищаем все поля
+		setName('');
+		setDescription('');
+		setPrice('');
+		setAvailable(true);
 	};
 
 	return (

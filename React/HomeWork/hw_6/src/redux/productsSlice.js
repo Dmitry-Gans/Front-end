@@ -5,26 +5,27 @@ const productsSlice = createSlice({
 	name: 'products', // Имя слайса
 	initialState: [], // Начальное состояние — пустой массив продуктов
 	reducers: {
+		// Добавление нового продукта
 		addProduct: (state, action) => {
-			// Добавление нового продукта
 			state.push(action.payload); // Добавляем новый продукт в массив
 		},
+		// Удаление продукта по ID
 		removeProduct: (state, action) => {
-			// Удаление продукта по ID
 			return state.filter(product => product.id !== action.payload);
 		},
+		// Обновление продукта
 		updateProduct: (state, action) => {
-			// Обновление продукта
 			const index = state.findIndex(
 				product => product.id === action.payload.id
-			); // Находим индекс продукта
+			); // Если индекс продукта нашелся
 			if (index !== -1) {
 				state[index] = action.payload; // Обновляем продукт по индексу
 			}
 		},
+		// Переключение доступности продукта
 		toggleAvailability: (state, action) => {
-			// Переключение доступности продукта
-			const product = state.find(product => product.id === action.payload); // Находим продукт
+			const product = state.find(product => product.id === action.payload);
+			// Если продукт нашелся
 			if (product) {
 				product.available = !product.available; // Меняем доступность
 			}
