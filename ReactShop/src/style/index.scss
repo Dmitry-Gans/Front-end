@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap');
+
+@import './vars';
+@import './mixins';
+@import './header';
+@import './banner';
+@import './categories-content';
+@import './info-products';
+@import './products-content';
+@import './privileges-content';
+@import './cart-content';
+@import './subscribe-content';
+@import './footer';
+@import './media';
+
+.cartPreview {
+	padding-top: 96px;
+	padding-bottom: 96px;
+}

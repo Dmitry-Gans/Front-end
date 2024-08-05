@@ -1,0 +1,57 @@
+.categories-content {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding-top: 65px;
+	padding-bottom: 16px;
+}
+
+.category {
+	min-width: 360px;
+	height: 260px;
+	background-size: 100%;
+	transition: all 0.3s;
+	&:hover {
+		scale: 1.07;
+		box-shadow: 4px 4px 8px 0px rgba(34, 34, 34, 0.6);
+		transition: all 0.3s;
+	}
+	&__shadow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: rgb(33, 22, 22, 0.7);
+		width: 100%;
+		height: 100%;
+	}
+	&__text {
+		color: #fff;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		color: #f16d7f;
+	}
+}
+
+.category1 {
+	background-image: url(/img/categories1_girl.svg);
+}
+
+.category2 {
+	background-image: url(/img/categories2_men.svg);
+}
+
+.category3 {
+	background-image: url(/img/categories3_kid.svg);
+}
+
+.category4 {
+	height: 180px;
+	grid-column: span 3;
+	background-image: url(/img/categories4_acces.svg);
+	&:hover {
+		scale: 1.03;
+	}
+}

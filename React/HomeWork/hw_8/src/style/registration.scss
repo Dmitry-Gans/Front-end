@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap');
+
+@import './vars';
+@import './mixins';
+@import './header';
+@import './breadcrumb';
+@import './registration-content';
+@import './subscribe-content';
+@import './footer';
+@import './media';
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.registration-content {
+		padding-top: 40px;
+
+		&__right {
+			width: 354px;
+			height: 337px;
+			font-size: 16px;
+
+			&-summary span {
+				padding-left: 45px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) and (min-width: 375px) {
+	.breadcrumb {
+		&__content {
+			justify-content: center;
+		}
+	}
+
+	.registration-content {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 40px;
+		padding-top: 40px;
+	}
+}

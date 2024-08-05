@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 96px;
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    padding: 15px;
+    width: 283px;
+    height: 44px;
+    border: 1px solid #ebebeb;
+
+    & svg:hover path {
+      fill: $colorText;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    gap: 17px;
+  }
+
+  &__link-box &__link:first-child {
+    color: $colorText;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 16px;
+    color: #c4c4c4;
+
+    &:hover {
+        color: $colorText;
+    }
+  }
+}

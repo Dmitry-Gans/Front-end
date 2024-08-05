@@ -1,0 +1,36 @@
+.banner {
+  background-color: $colorBackground;
+  &__size {
+    @include centerSize(1600px);
+    height: 764px;
+    display: flex;
+    gap: 63px;
+  }
+  &__img {
+    max-width: 800px;
+    max-height: 764px;
+  }
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 406px;
+    max-height: 93px;
+    padding: 0 0 0 16px;
+    border-left: 12px solid #f16d7f;
+    margin-top: 290px;
+    margin-bottom: 381px;
+    color: #222;
+    text-align: left;
+  }
+  &__title h1 {
+    font-weight: 900;
+    font-size: 48px;
+  }
+  &__title h2 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  &__h2_color {
+    color: #f16d7f;
+  }
+}

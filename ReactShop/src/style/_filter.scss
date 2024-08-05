@@ -1,0 +1,142 @@
+.filter {
+  &__size {
+    height: 132px;
+    display: flex;
+    gap: 30px;
+    padding-top: 39px;
+    padding-bottom: 64px;
+  }
+
+  &__details {
+    width: 360px;
+    box-sizing: border-box;
+    &[open] {
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] path {
+      fill: $colorText;
+    }
+
+    &[open] .filter__summary {
+      color: $colorText;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 13px;
+    padding-left: 16px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 16px;
+    background-color: #ffffff;
+  }
+
+  &__item[open] &__item-heading {
+    color: $colorText;
+  }
+
+  &__item-heading {
+    width: 327px;
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorText2;
+    padding: 8px 11px 11px;
+    border-left: 5px solid $colorText;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 11px;
+    padding: 24px 16px 6px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorText2;
+    &:hover {
+      color: $colorText;
+    }
+  }
+
+  &__sorting {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    gap: 28px;
+  }
+
+  &__sorting-details {
+    position: relative;
+  }
+
+  &__sorting-details[open] &__sorting-box {
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+    background: #fff;
+  }
+
+  &__sorting-details[open] path {
+    fill: $colorText;
+  }
+
+  &__sorting-details[open] &__sorting-summary {
+    color: $colorText;
+  }
+
+  &__sorting-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorText2;
+  }
+
+  &__sorting-box {
+    width: 79px;
+    top: 22px;
+    left: -9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 7px 9px 11px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__sorting-box1 {
+    width: 160px;
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorText2;
+    &:hover {
+      color: $colorText;
+    }
+  }
+}
