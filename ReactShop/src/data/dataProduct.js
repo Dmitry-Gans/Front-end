@@ -1,6 +1,8 @@
+import { nanoid } from 'nanoid';
+
 const dataProducts = [
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product1.svg',
 		textButton: 'Add to Cart',
@@ -11,10 +13,9 @@ const dataProducts = [
 		color: 'White',
 		size: 'L',
 		quantity: 1,
-	
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product2.svg',
 		textButton: 'Add to Cart',
@@ -23,12 +24,11 @@ const dataProducts = [
 			'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 		price: 64.99,
 		color: 'Black',
-		size: 'X',
+		size: 'XS',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product3.svg',
 		textButton: 'Add to Cart',
@@ -39,10 +39,9 @@ const dataProducts = [
 		color: 'Blue',
 		size: 'S',
 		quantity: 1,
-	
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product4.svg',
 		textButton: 'Add to Cart',
@@ -53,10 +52,9 @@ const dataProducts = [
 		color: 'Gray',
 		size: 'XS',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product5.svg',
 		textButton: 'Add to Cart',
@@ -67,10 +65,9 @@ const dataProducts = [
 		color: 'Blue',
 		size: 'L',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product6.svg',
 		textButton: 'Add to Cart',
@@ -81,10 +78,9 @@ const dataProducts = [
 		color: 'Green',
 		size: 'L',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product7.svg',
 		textButton: 'Add to Cart',
@@ -95,10 +91,9 @@ const dataProducts = [
 		color: 'Red',
 		size: 'M',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product8.svg',
 		textButton: 'Add to Cart',
@@ -109,10 +104,9 @@ const dataProducts = [
 		color: 'White',
 		size: 'S',
 		quantity: 1,
-	
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product9.svg',
 		textButton: 'Add to Cart',
@@ -123,10 +117,9 @@ const dataProducts = [
 		color: 'Blue',
 		size: 'S',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product10.svg',
 		textButton: 'Add to Cart',
@@ -137,10 +130,9 @@ const dataProducts = [
 		color: 'White',
 		size: 'M',
 		quantity: 1,
-	
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product11.svg',
 		textButton: 'Add to Cart',
@@ -151,10 +143,9 @@ const dataProducts = [
 		color: 'Black',
 		size: 'M',
 		quantity: 1,
-		
 	},
 	{
-		id: Date.now() - Math.random() * 1000,
+		id: nanoid(10),
 		class: 'products-content__item',
 		src: '/img/product12.svg',
 		textButton: 'Add to Cart',
@@ -165,7 +156,6 @@ const dataProducts = [
 		color: 'Brown',
 		size: 'L',
 		quantity: 1,
-		
 	},
 ];
 
