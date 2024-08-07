@@ -11,9 +11,11 @@
 .products-content {
 	display: grid;
 	gap: 30px;
-
-	&__item2 {
-		grid-row: 1;
+	&__recommendation {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		padding-bottom: 48px;
 	}
 }
 
@@ -48,9 +50,13 @@
 	}
 
 	.products-content {
-		&__item3 {
-			display: none;
+		&__recommendation {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
 		}
+	}
+	.products-content__item:nth-child(3) {
+		display: none;
 	}
 }
 
@@ -138,8 +144,12 @@
 	}
 
 	.products-content {
-		&__item2 {
-			display: none;
+		&__recommendation {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 16px;
 		}
+	}
+	.products-content__item:nth-child(3) {
+		display: none;
 	}
 }

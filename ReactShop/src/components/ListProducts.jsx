@@ -6,7 +6,7 @@ function ListProducts({quantity}) {
 	const numericQuantity = Number(quantity) || 12; // Преобразуем в число или дефолтное значение 12
 
 	return (
-		<article className='products-content center'>
+		<article className='products-content__recommendation center'>
 			{products.slice(0, numericQuantity).map(
 				(
 					product // С помощью slice ограничиваем до 6 продуктов
