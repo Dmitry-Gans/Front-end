@@ -4,7 +4,6 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 function ProductDetails() {
-	
 	return (
 		<>
 			<article className='product-details'>
@@ -45,7 +44,6 @@ function ProductDetails() {
 					</SwiperSlide>
 				</Swiper>
 			</article>
-
 			<article className='product-description center'>
 				<div className='product-description__box'>
 					<div className='product-description__box-up'>
