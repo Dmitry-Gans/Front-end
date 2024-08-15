@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Импортируем useLocation для получения текущего пути
+import { useLocation } from 'react-router-dom';
 
 const ScrollTop = () => {
 	const { pathname } = useLocation(); // Получаем текущий путь из маршрутизатора
