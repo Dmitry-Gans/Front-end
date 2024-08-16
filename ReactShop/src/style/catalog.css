@@ -731,8 +731,8 @@ summary::-webkit-details-marker {
 }
 @media (max-width: 767px) and (min-width: 375px) {
   .center {
-    padding-left: calc(50% - 172px);
-    padding-right: calc(50% - 172px);
+    padding-left: calc(50% - 180px);
+    padding-right: calc(50% - 180px);
   }
   .header__size {
     padding: 18px 0;
@@ -781,8 +781,9 @@ summary::-webkit-details-marker {
     font-size: 20px;
   }
   .categories-content {
-    grid-template-rows: repeat(4, auto);
-    grid-auto-flow: column dense;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     padding-bottom: 64px;
   }
